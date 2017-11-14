@@ -1,9 +1,9 @@
 <template>
-	<router-view/>
+	<el-header>头部</el-header>
 </template>
 
 <script>
 	export default {
-		name: 'app'
+		name:'Header'
 	}
 </script>
