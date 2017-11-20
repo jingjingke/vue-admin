@@ -1,7 +1,7 @@
 <template>
 	<el-container id="app">
 		<SideBar></SideBar>
-		<el-container class='is-vertical'>
+		<el-container direction='vertical'>
 			<Header></Header>
 			<router-view/>
 			<Footer></Footer>

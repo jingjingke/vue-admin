@@ -5,17 +5,23 @@ import App from './App'
 import router from './router'
 
 //单独使用element组件
-import { Container, Header, Aside, Main, Footer, Button} from 'element-ui'
+import {
+  MessageBox,Message,Input,Button,Form,FormItem,Container,Header,Aside,Main,Footer
+} from 'element-ui'
+
+Vue.use(Input)
+Vue.use(Button)
+Vue.use(Form)
+Vue.use(FormItem)
 Vue.use(Container)
 Vue.use(Header)
 Vue.use(Aside)
 Vue.use(Main)
 Vue.use(Footer)
-Vue.use(Button)
 
-//使用element完整的框架
-//import ElementUI from 'element-ui'
-//Vue.use(ElementUI)
+Vue.prototype.$message = Message
+//Vue.prototype.$msgbox = MessageBox
+Vue.prototype.$alert = MessageBox.alert
 
 //注册全局组件开始
 import components from './components/';
