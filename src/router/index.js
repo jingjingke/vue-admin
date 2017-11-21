@@ -3,6 +3,7 @@ import Router from 'vue-router'
 import Home from '@/components/home'
 import Login from '@/view/Login'
 import Info from '@/view/Info'
+import NotFound from '@/view/NotFound'
 
 Vue.use(Router)
 
@@ -26,6 +27,11 @@ export default new Router({
 			path: '/login',
 			name: 'Login',
 			component: Login
+		},
+		{
+			path: '*',
+			name: 'NotFound',
+			component: NotFound
 		}
 	]
 })
