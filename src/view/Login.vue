@@ -1,7 +1,7 @@
 <template>
 	<div class="login-page">
 		<div class="login-page-form">
-			<h1>催收管理系统</h1>
+			<h1>金爱农运营后台</h1>
 			<el-form ref="login" :model="form" class="login-form">
 				<el-form-item
 					label="用户名"

@@ -6,9 +6,16 @@ import router from './router'
 
 //单独使用element组件
 import {
-  MessageBox,Message,Input,Button,Form,FormItem,Container,Header,Aside,Main,Footer
+  Menu,Submenu,MenuItem,MenuItemGroup,Dropdown,DropdownMenu,DropdownItem,MessageBox,Message,Input,Button,Form,FormItem,Container,Header,Aside,Main,Footer
 } from 'element-ui'
 
+Vue.use(Menu)
+Vue.use(Submenu)
+Vue.use(MenuItem)
+Vue.use(MenuItemGroup)
+Vue.use(Dropdown)
+Vue.use(DropdownMenu)
+Vue.use(DropdownItem)
 Vue.use(Input)
 Vue.use(Button)
 Vue.use(Form)

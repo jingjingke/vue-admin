@@ -4,7 +4,6 @@
 		<el-container direction='vertical'>
 			<Header></Header>
 			<router-view/>
-			<Footer></Footer>
 		</el-container>
 	</el-container>
 </template>
