@@ -21,9 +21,13 @@
 		methods: {
 			handleCommand(command) {
 				if(command === 'reset'){
-					console.log('去重置密码页面')
+					//先判断这个页面不为password页面再去跳转
+					if(this.$route.path !== '/user/password'){
+						this.$router.push('/user/password')
+					}
 				}else if(command === 'out'){
-					console.log('执行退出操作')
+					console.log('执行退出操作--例如清相关数据再去跳转')
+					this.$router.push('/login')
 				}
 			}
 		}

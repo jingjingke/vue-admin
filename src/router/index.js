@@ -24,7 +24,7 @@ export default new Router({
 					component: Info
 				},
 				{
-					path: 'user/Password',	//用户-重置密码
+					path: 'user/password',	//用户-重置密码
 					name: 'Password',
 					component: Password
 				}
