@@ -4,6 +4,8 @@ import Home from '@/components/home'
 import Login from '@/view/Login'
 import Info from '@/view/Info'
 import NotFound from '@/view/NotFound'
+import Password from '@/view/user/Password'
+
 
 Vue.use(Router)
 
@@ -20,6 +22,11 @@ export default new Router({
 					path: 'info',
 					name: 'Info',
 					component: Info
+				},
+				{
+					path: 'user/Password',	//用户-重置密码
+					name: 'Password',
+					component: Password
 				}
 			]
 		},

@@ -6,9 +6,11 @@ import router from './router'
 
 //单独使用element组件
 import {
-  Menu,Submenu,MenuItem,MenuItemGroup,Dropdown,DropdownMenu,DropdownItem,MessageBox,Message,Input,Button,Form,FormItem,Container,Header,Aside,Main,Footer
+  Breadcrumb,BreadcrumbItem,Menu,Submenu,MenuItem,MenuItemGroup,Dropdown,DropdownMenu,DropdownItem,MessageBox,Message,Input,Button,Form,FormItem,Container,Header,Aside,Main,Footer
 } from 'element-ui'
 
+Vue.use(Breadcrumb)
+Vue.use(BreadcrumbItem)
 Vue.use(Menu)
 Vue.use(Submenu)
 Vue.use(MenuItem)
