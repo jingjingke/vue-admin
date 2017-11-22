@@ -1,9 +1,6 @@
 <template>
 	<el-main>
-		<el-breadcrumb separator="/">
-			<el-breadcrumb-item>任务管理</el-breadcrumb-item>
-			<el-breadcrumb-item>我的任务</el-breadcrumb-item>
-		</el-breadcrumb>
+		<Breadcrumb></Breadcrumb>
 	</el-main>
 </template>
 

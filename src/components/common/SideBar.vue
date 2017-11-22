@@ -4,8 +4,8 @@
 			<i class="el-icon-more" v-if='isCollapse'></i>
 			<template v-else>金爱农运营后台</template>
 		</div>
-		<el-menu unique-opened router :collapse='isCollapse'>
-			<el-submenu v-for='(menu,index) of menus' :index="menu.children[0].route">
+		<el-menu unique-opened router :collapse='isCollapse' :default-active='activeValue'>
+			<el-submenu v-for='(menu,index) of menuJson' :index="menu.children[0].route">
 				<template slot="title">
 					<i :class="menu.icon"></i>
 					<span>{{menu.name}}</span>
@@ -17,127 +17,17 @@
 </template>
 
 <script>
+	//导入菜单
+	import menuJson from '@/data/menus';
+	
 	export default {
 		name: 'SideBar',
 		data() {
 			return {
 				isCollapse: false,
 				canClick: true,
-				menus: [{
-					name: '工作流设置',
-					icon:'el-icon-sort',
-					children: [{
-						name: '流程管理',
-						route: '/work/process'
-					}, {
-						name: '产品流程分配',
-						route: '/work/assignment'
-					}, {
-						name: '委派规则配置',
-						route: '/work/delegate'
-					}]
-				}, {
-					name: '组织架构',
-					icon:'el-icon-share',
-					children: [{
-						name: '公司管理',
-						route: '/group/company'
-					}, {
-						name: '角色管理',
-						route: '/group/role'
-					}, {
-						name: '部门管理',
-						route: '/group/department'
-					}, {
-						name: '权限管理',
-						route: '/group/power'
-					}]
-				}, {
-					name: '产品管理',
-					icon:'el-icon-menu',
-					children: [{
-						name: '产品设置',
-						route: '/product/config'
-					}, {
-						name: '资料配置',
-						route: '/product/material'
-					}]
-				}, {
-					name: '任务管理',
-					icon:'el-icon-setting',
-					children: [{
-						name: '任务概况',
-						route: '/task/info'
-					}, {
-						name: '我的任务',
-						route: '/task/my'
-					}, {
-						name: '任务派发',
-						route: '/task/dispatch'
-					}]
-				}, {
-					name: '订单管理',
-					icon:'el-icon-star-on',
-					children: [{
-						name: '借款订单查询',
-						route: '/order/loan'
-					}, {
-						name: '意向订单查询',
-						route: '/order/intend'
-					}]
-				}, {
-					name: '用户管理',
-					icon:'el-icon-search',
-					children: [{
-						name: '用户查询',
-						route: '/user/find'
-					}]
-				}, {
-					name: '短信管理',
-					icon:'el-icon-message',
-					children: [{
-						name: '模板配置',
-						route: '/sms/config'
-					}, {
-						name: '模板审核',
-						route: '/sms/review'
-					}, {
-						name: '模板启用',
-						route: '/sms/enabled'
-					}]
-				}, {
-					name: '催收管理',
-					icon:'el-icon-bell',
-					children: [{
-						name: '策略',
-						route: '/collection/strategy'
-					}, {
-						name: '催收流程',
-						route: '/collection/process'
-					}, {
-						name: '角色催收地区',
-						route: '/collection/area'
-					}]
-				}, {
-					name: '案件管理',
-					icon:'el-icon-document',
-					children: [{
-						name: '案件列表',
-						route: '/board/all'
-					}, {
-						name: '所有未催',
-						route: '/board/not-reminder'
-					}, {
-						name: '所有已催',
-						route: '/board/has-reminded'
-					}, {
-						name: '答应会还',
-						route: '/board/promised'
-					}, {
-						name: '重点关注',
-						route: '/board/focus'
-					}]
-				}]
+				activeValue:'',
+				menuJson:menuJson
 			}
 		},
 		methods: {
@@ -152,7 +42,23 @@
 					}, 800)
 				}
 
+			},
+			//根据路由路径判断当前打开的是哪个路由
+			checkPath(){
+				//针对路径可能是带路由参数的情况，所以统一处理
+				let arr = this.$route.path.split('/')
+				//判断路由2级以上
+				if(arr.length > 2){
+					this.activeValue =  '/'+arr[1]+'/'+arr[2];
+				}
 			}
+		},
+		watch:{
+			'$route.path':'checkPath'
+		},
+		mounted(){
+			//进入页面初始第一次检查
+			this.checkPath();
 		}
 	}
 </script>
@@ -192,6 +98,7 @@
 			.is-active {
 				.el-submenu__title {
 					font-weight: bold;
+					background:#e2e2e2;
 				}
 			}
 			.el-menu-item {
