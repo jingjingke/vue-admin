@@ -49,7 +49,7 @@
 //							message:'登录成功！',
 //							type:'success'
 //						})
-						this.$router.push('/info')
+						this.$router.push('/work')
 					}
 				})
 			}

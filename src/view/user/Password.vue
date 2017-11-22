@@ -1,7 +1,7 @@
 <template>
 	<el-main>
 		<el-breadcrumb separator="/">
-			<el-breadcrumb-item>用户</el-breadcrumb-item>
+			<el-breadcrumb-item>用户管理</el-breadcrumb-item>
 			<el-breadcrumb-item>重置密码</el-breadcrumb-item>
 		</el-breadcrumb>
 		<el-form class='reset-password-form' :rules="rules" ref="form" :model="form" label-width="100px">

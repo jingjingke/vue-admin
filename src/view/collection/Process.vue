@@ -1,0 +1,22 @@
+<template>
+	<el-main>
+		<el-breadcrumb separator="/">
+			<el-breadcrumb-item>催收管理</el-breadcrumb-item>
+			<el-breadcrumb-item>催收流程</el-breadcrumb-item>
+		</el-breadcrumb>
+	</el-main>
+</template>
+
+<script>
+	export default {
+		name: 'CollectionProcess',
+		data() {
+			return {
+				
+			}
+		},
+		methods: {
+			
+		}
+	}
+</script>

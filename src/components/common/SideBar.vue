@@ -50,7 +50,7 @@
 						route: '/group/department'
 					}, {
 						name: '权限管理',
-						route: '/group/setPower'
+						route: '/group/power'
 					}]
 				}, {
 					name: '产品管理',
