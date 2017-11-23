@@ -21,4 +21,7 @@
 	html,body,body>.el-container {
 		height: 100%;
 	}
+	
+	/*引入通用样式*/
+	@import url("../assets/css/style.css");
 </style>

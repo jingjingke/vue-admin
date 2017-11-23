@@ -44,6 +44,13 @@ Object.keys(components).forEach((key)=>{
 })
 //注册全局组件完成
 
+//引入全局方法开始
+import methods from './methods';
+Object.keys(methods).forEach((key)=>{
+	Vue.prototype[key] = methods[key];
+})
+//引入全局方法结束
+
 Vue.config.productionTip = false
 
 /* eslint-disable no-new */

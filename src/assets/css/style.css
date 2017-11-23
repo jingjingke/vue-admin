@@ -1,0 +1,7 @@
+.el-upload__tip {
+	display: inline;
+	margin-left: 10px;
+}
+.disNone {
+	display: none;
+}

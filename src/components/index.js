@@ -11,5 +11,5 @@ export default {
 	SideBar,
 	Breadcrumb,
 	SearchWarp,
-	ContentWarp
+	ContentWarp,
 }
