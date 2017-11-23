@@ -1,11 +1,11 @@
 <template>
-	<el-container id="app">
+	<div id="app" class="my-app">
 		<SideBar></SideBar>
 		<el-container direction='vertical'>
 			<Header></Header>
 			<router-view/>
 		</el-container>
-	</el-container>
+	</div>
 </template>
 
 <script>
@@ -18,7 +18,7 @@
 	body {
 		margin: 0;
 	}
-	html,body,body>.el-container {
+	html,body,.my-app {
 		height: 100%;
 	}
 	

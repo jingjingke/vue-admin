@@ -1,19 +1,23 @@
 <template>
-	<el-aside :width="isCollapse===true?'64px':'200px'" class='side-menu'>
+	<div :width="isCollapse===true?'64px':'200px'" class='side-menu'>
 		<div class="page-title" @click='toggleCollapse'>
 			<i class="el-icon-more" v-if='isCollapse'></i>
 			<template v-else>金爱农运营后台</template>
 		</div>
 		<el-menu unique-opened router :collapse='isCollapse' :default-active='activeValue'>
-			<el-submenu v-for='(menu,index) of menuJson' :index="menu.children[0].route">
-				<template slot="title">
-					<i :class="menu.icon"></i>
-					<span>{{menu.name}}</span>
-				</template>
-				<el-menu-item v-for='child in menu.children' :index='child.route'>{{child.name}}</el-menu-item>
-			</el-submenu>
+			<template v-for='(menu,index) in menuJson'>
+				<el-submenu :index="menu.children[0].route">
+					<template slot="title">
+						<i :class="menu.icon"></i>
+						<span>{{menu.name}}</span>
+					</template>
+					<template v-for='child in menu.children'>
+						<el-menu-item :index='child.route'>{{child.name}}</el-menu-item>
+					</template>
+				</el-submenu>
+			</template>
 		</el-menu>
-	</el-aside>
+	</div>
 </template>
 
 <script>
@@ -65,7 +69,8 @@
 
 <style lang="scss">
 	.side-menu {
-		overflow: inherit;
+		float: left;
+		height: 100%;
 		background: #fbfbfb;
 		transition: all 0.3s;
 		/*标题*/
