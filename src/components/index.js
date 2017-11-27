@@ -1,9 +1,10 @@
-//头部组件
+//通过组件
 import Header from "./common/Header";
 import SideBar from "./common/SideBar";
 import Breadcrumb from "./common/Breadcrumb";
 import SearchWarp from "./common/SearchWarp";
 import ContentWarp from "./common/ContentWarp";
+//import ImgPreview from "./imgPreview/";
 
 
 export default {
@@ -12,4 +13,5 @@ export default {
 	Breadcrumb,
 	SearchWarp,
 	ContentWarp,
+//	ImgPreview
 }

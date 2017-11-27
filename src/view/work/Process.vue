@@ -19,7 +19,7 @@
 				<el-table-column align='center' label="定义名称" prop='definedName' />
 				<el-table-column align='center' label="操作">
 					<template slot-scope="scope">
-						<el-button size="mini" icon="el-icon-search">查看流程图</el-button>
+						<el-button size="mini" icon="el-icon-search" @click='$imgPreview([scope.row.litpic,scope.row.processName])'>查看流程图</el-button>
 					</template>
 				</el-table-column>
 			</el-table>
@@ -28,7 +28,8 @@
 			<el-pagination :page-size="10" layout="total, prev, pager, next, jumper" :total="126">
 			</el-pagination>
 		</ContentWarp>
-
+		
+		<!--新增窗口-->
 		<el-dialog title="新增流程" width='600px' center :visible.sync='addInfo.isOpen' :show-close='false' :before-close='resetAddInfo'>
 			<el-form :model="addInfo.form" ref='formByAdd' :rules="rules" label-width="80px">
 				<el-form-item label="流程名称" prop='name'>
@@ -52,6 +53,7 @@
 				<el-button @click="resetAddInfo">取 消</el-button>
 			</div>
 		</el-dialog>
+		
 	</el-main>
 </template>
 
