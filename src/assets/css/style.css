@@ -5,3 +5,15 @@
 .disNone {
 	display: none;
 }
+
+/*针对弹层上面的下拉选框大小*/
+.el-dialog .el-select {
+	width: 100%;
+}
+
+.text-center {
+	text-align: center;
+}
+.text-red {
+	color: #c00;
+}

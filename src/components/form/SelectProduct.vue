@@ -18,7 +18,8 @@
 			}
 		},
 		watch: {
-			'code': "codeChange"
+			'code': "codeChange",
+			'value' (val) { this.code = val }
 		},
 		props: ['placeholder', 'value'],
 		methods: {

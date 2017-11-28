@@ -18,7 +18,8 @@
 			}
 		},
 		watch: {
-			'pid': "pidChange"
+			'pid': "pidChange",
+			'value' (val) { this.pid = val }
 		},
 		props: ['placeholder', 'value'],
 		methods: {
