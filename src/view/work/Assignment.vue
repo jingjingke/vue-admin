@@ -3,15 +3,11 @@
 		<Breadcrumb></Breadcrumb>
 		<SearchWarp>
 			<el-form :inline="true" ref="searchInfo.form" :model="searchInfo.form">
-				<el-form-item label="产品码">
+				<el-form-item label="所属产品">
 					<el-input v-model="searchInfo.form.productCode" placeholder="请输入产品码"></el-input>
 				</el-form-item>
 				<el-form-item label="所属公司">
-					<el-select v-model="searchInfo.form.companyCode" clearable placeholder="请选择">
-						<template v-for="option of companyList">
-							<el-option :label='option.name' :value='option.code'></el-option>
-						</template>
-					</el-select>
+					<SelectCompany v-model="searchInfo.form.companyCode"></SelectCompany>
 				</el-form-item>
 				<el-form-item>
 					<el-button type="success" @click="getListAjax">查询</el-button>
@@ -22,8 +18,8 @@
 		<ContentWarp>
 			<el-table border stripe :data='searchInfo.list' size='small'>
 				<el-table-column align='center' label="产品名称" prop='productName' />
-				<el-table-column align='center' label="产品码" prop='productCode' />
-				<el-table-column align='center' label="所属公司" prop='companyName' />
+				<el-table-column align='center' label="产品编码" prop='productCode' />
+				<el-table-column align='center' label="公司" prop='companyName' />
 				<el-table-column align='center' label="流程名称" prop='processName' />
 				<el-table-column align='center' label="定义名称" prop='definedName' />
 				<el-table-column align='center' label="状态" prop='status' :formatter='formatValue' />

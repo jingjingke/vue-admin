@@ -19,7 +19,6 @@ export default {
 					desc: ''
 				}
 			},
-			companyList:[{code:'001',name:'杭州金爱农总公司'},{code:'002',name:'富阳金爱农公司'},{code:'003',name:'下沙金爱农公司'}],
 			statusRule:[{text:0,value:"禁用"},{text:1,value:"启用"}],
 			createdRule:[{text:0,value:"未分配"},{text:1,value:"已分配"}],
 		}

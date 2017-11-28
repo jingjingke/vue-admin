@@ -4,7 +4,7 @@ import SideBar from "./common/SideBar";
 import Breadcrumb from "./common/Breadcrumb";
 import SearchWarp from "./common/SearchWarp";
 import ContentWarp from "./common/ContentWarp";
-//import ImgPreview from "./imgPreview/";
+import SelectCompany from "./form/SelectCompany";
 
 
 export default {
@@ -13,5 +13,5 @@ export default {
 	Breadcrumb,
 	SearchWarp,
 	ContentWarp,
-//	ImgPreview
+	SelectCompany
 }
