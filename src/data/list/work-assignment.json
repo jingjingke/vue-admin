@@ -1,0 +1,103 @@
+[
+	{
+		"productName": "微农贷",
+		"productCode": "WND",
+		"companyName": "杭州金爱农总公司",
+		"companyCode": "001",
+		"status":0,
+		"isAutoCreated":1,
+		"processId": "1",
+		"processName": "浙江申请减免",
+		"definedName": "orderApply:1:1"
+	}, {
+		"productName": "微农贷",
+		"productCode": "WND",
+		"companyName": "杭州金爱农总公司",
+		"companyCode": "001",
+		"status":1,
+		"isAutoCreated":1,
+		"processId": "1",
+		"processName": "浙江代扣",
+		"definedName": "orderApply:2:3"
+	}, {
+		"productName": "微农贷",
+		"productCode": "WND",
+		"companyName": "杭州金爱农总公司",
+		"companyCode": "001",
+		"status":1,
+		"isAutoCreated":1,
+		"processId": "1",
+		"processName": "浙江代扣2",
+		"definedName": "orderApply:3:1"
+	}, {
+		"productName": "微农贷",
+		"productCode": "WND",
+		"companyName": "杭州金爱农总公司",
+		"companyCode": "001",
+		"status":1,
+		"isAutoCreated":0,
+		"processId": "1",
+		"processName": "浙江代扣2-2",
+		"definedName": "orderApply:3:2"
+	}, {
+		"productName": "微农贷",
+		"productCode": "WND",
+		"companyName": "杭州金爱农总公司",
+		"companyCode": "001",
+		"status":1,
+		"isAutoCreated":1,
+		"processId": "1",
+		"processName": "浙江代扣2-3",
+		"definedName": "orderApply:3:3"
+	}, {
+		"productName": "微农贷",
+		"productCode": "WND",
+		"companyName": "杭州金爱农总公司",
+		"companyCode": "001",
+		"status":1,
+		"isAutoCreated":1,
+		"processId": "1",
+		"processName": "浙江代扣2",
+		"definedName": "orderApply:3:1"
+	}, {
+		"productName": "微农贷",
+		"productCode": "WND",
+		"companyName": "杭州金爱农总公司",
+		"companyCode": "001",
+		"status":1,
+		"isAutoCreated":1,
+		"processId": "1",
+		"processName": "浙江代扣2-2",
+		"definedName": "orderApply:3:2"
+	}, {
+		"productName": "微农贷",
+		"productCode": "WND",
+		"companyName": "杭州金爱农总公司",
+		"companyCode": "001",
+		"status":0,
+		"isAutoCreated":1,
+		"processId": "1",
+		"processName": "浙江代扣2-3",
+		"definedName": "orderApply:3:3"
+	}, {
+		"productName": "微农贷",
+		"productCode": "WND",
+		"companyName": "杭州金爱农总公司",
+		"companyCode": "001",
+		"status":1,
+		"isAutoCreated":1,
+		"processId": "1",
+		"processName": "浙江代扣2-2",
+		"definedName": "orderApply:3:2"
+	}, {
+		"productName": "微农贷",
+		"productCode": "WND",
+		"companyName": "杭州金爱农总公司",
+		"companyCode": "001",
+		"status":1,
+		"isAutoCreated":0,
+		"processId": "1",
+		"processName": "浙江代扣2-3",
+		"definedName": "orderApply:3:3"
+	}
+]

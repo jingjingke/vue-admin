@@ -6,7 +6,7 @@ import router from './router'
 
 //单独使用element组件
 import {
-  Upload,Dialog,Pagination,Table,TableColumn,Breadcrumb,BreadcrumbItem,Menu,Submenu,MenuItem,MenuItemGroup,Dropdown,DropdownMenu,DropdownItem,MessageBox,Message,Input,Button,Form,FormItem,Container,Header,Aside,Main,Footer
+  Upload,Dialog,Pagination,Table,TableColumn,Breadcrumb,BreadcrumbItem,Menu,Submenu,MenuItem,MenuItemGroup,Dropdown,DropdownMenu,DropdownItem,MessageBox,Message,Input,Option,Select,Button,Form,FormItem,Container,Header,Aside,Main,Footer
 } from 'element-ui'
 
 Vue.use(Upload)
@@ -24,6 +24,8 @@ Vue.use(Dropdown)
 Vue.use(DropdownMenu)
 Vue.use(DropdownItem)
 Vue.use(Input)
+Vue.use(Option)
+Vue.use(Select)
 Vue.use(Button)
 Vue.use(Form)
 Vue.use(FormItem)
