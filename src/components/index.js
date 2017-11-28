@@ -4,8 +4,10 @@ import SideBar from "./common/SideBar";
 import Breadcrumb from "./common/Breadcrumb";
 import SearchWarp from "./common/SearchWarp";
 import ContentWarp from "./common/ContentWarp";
-import SelectCompany from "./form/SelectCompany";
 
+import SelectCompany from "./form/SelectCompany";
+import SelectProduct from "./form/SelectProduct";
+import SelectProcess from "./form/SelectProcess";
 
 export default {
 	Header,
@@ -13,5 +15,7 @@ export default {
 	Breadcrumb,
 	SearchWarp,
 	ContentWarp,
-	SelectCompany
+	SelectCompany,
+	SelectProduct,
+	SelectProcess
 }

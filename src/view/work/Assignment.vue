@@ -4,7 +4,7 @@
 		<SearchWarp>
 			<el-form :inline="true" ref="searchInfo.form" :model="searchInfo.form">
 				<el-form-item label="所属产品">
-					<el-input v-model="searchInfo.form.productCode" placeholder="请输入产品码"></el-input>
+					<SelectProduct v-model="searchInfo.form.productCode"></SelectProduct>
 				</el-form-item>
 				<el-form-item label="所属公司">
 					<SelectCompany v-model="searchInfo.form.companyCode"></SelectCompany>
