@@ -1,7 +1,7 @@
-import listData from '@/data/list/work-assignment.json';
+import listData from '@/data/list/work-delegate.json';
 
 export default {
-	name: 'WorkAssignment',
+	name: 'WorkDelegate',
 	data() {
 		return {
 			searchInfo: { //存放查询表单及列表数据
@@ -17,7 +17,10 @@ export default {
 				form: {
 					productCode: '',
 					companyCode: '',
-					processId: ''
+					processId: '',
+					assignedRoleId: '',
+					type: '',
+					roleId: '',
 				}
 			},
 			changeInfo: {
@@ -43,6 +46,27 @@ export default {
 					required: true,
 					message: '请选择流程',
 					trigger: 'change'
+				}],
+				assignedRoleId: [{
+					required: true,
+					message: '请选择被指派角色',
+				}, {
+					type: 'number',
+					message: '请选择被指派角色',
+					trigger: 'change'
+				}],
+				type: [{
+					required: true,
+					message: '请选择指派方式',
+					trigger: 'change'
+				}],
+				roleId: [{
+					required: true,
+					message: '请选择指派角色',
+				},{
+					type: 'number',
+					message: '请选择指派角色',
+					trigger: 'change'
 				}]
 			}
 		}
@@ -57,22 +81,24 @@ export default {
 		//格式化数字转成字符串名
 		formatValue(row, column, cellValue) {
 			//根据传入的prop值确认规则列表
-			if(column.property === 'status') {
+			if(column.property === 'type') {
 				return this.fomatLoopValue(cellValue, [{
-					text: 0,
-					value: "禁用"
+					text: '0',
+					value: "人工分配"
 				}, {
-					text: 1,
+					text: '1',
+					value: "自动指派"
+				}]);
+			} else if(column.property === 'status') {
+				return this.fomatLoopValue(cellValue, [{
+					text: '0',
 					value: "启用"
-				}]);
-			} else if(column.property === 'isAutoCreated') {
-				return this.fomatLoopValue(cellValue, [{
-					text: 0,
-					value: "未分配"
 				}, {
-					text: 1,
-					value: "已分配"
+					text: '1',
+					value: "禁用"
 				}]);
+			} else if(column.property === 'roleName') {
+				return cellValue || '暂无';
 			}
 		},
 		//新增ajax
@@ -80,6 +106,10 @@ export default {
 			this.$refs[formName].validate((valid) => {
 				//字段验证是否成功
 				if(valid) {
+					//如果分配方式自动的话就清除指派角色
+					if(this.addInfo.form.type !== '2') {
+						this.addInfo.form.roleId = ''
+					}
 					console.log('在此发送addInfo.form数据')
 					console.log(this.addInfo.form)
 				} else {
@@ -102,10 +132,13 @@ export default {
 				this.$refs['formByChange'].resetFields()
 				//提取列表中的值
 				this.changeInfo.form = {
-					id:obj.id,
+					id: obj.id,
 					productCode: obj.productCode,
 					companyCode: obj.companyCode,
-					processId: obj.processId
+					processId: obj.processId,
+					assignedRoleId: obj.assignedRole.id,
+					type: obj.type,
+					roleId: obj.roleId,
 				}
 			}, 100)
 		},
@@ -114,6 +147,10 @@ export default {
 			this.$refs[formName].validate((valid) => {
 				//字段验证是否成功
 				if(valid) {
+					//如果分配方式自动的话就清除指派角色
+					if(this.changeInfo.form.type !== '2') {
+						this.changeInfo.form.roleId = ''
+					}
 					console.log('在此发送changeInfo.form数据')
 					console.log(this.changeInfo.form)
 				} else {
