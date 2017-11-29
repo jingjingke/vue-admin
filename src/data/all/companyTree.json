@@ -1,0 +1,227 @@
+[
+	{
+		"area": "",
+		"code": "0",
+		"hasChild": "1",
+		"id": 1,
+		"isEnd": "0",
+		"name": "总公司",
+		"parentId": "",
+		"principalArea": "",
+		"principalUserId": "",
+		"status": "0",
+		"type": "-1",
+		"children": [
+			{
+				"area": "330000",
+				"code": "0001",
+				"guaranteed": "55",
+				"hasChild": "1",
+				"id": 24,
+				"isEnd": "0",
+				"name": "浙江金爱农网络科技有限公司",
+				"parentId": "1",
+				"principalArea": "330000",
+				"status": "0",
+				"type": "0",
+				"children": [
+					{
+						"area": "330802",
+						"code": "00010001",
+						"hasChild": "1",
+						"id": 25,
+						"isEnd": "0",
+						"name": "浙江金爱农网络科技有限公司衢州分公司",
+						"parentId": "24",
+						"principalArea": "330802",
+						"status": "0",
+						"type": "1",
+						"children": [
+							{
+								"area": "330881",
+								"code": "000100010001",
+								"hasChild": "0",
+								"id": 26,
+								"isEnd": "1",
+								"name": "浙江金爱农网络科技有限公司衢州分公司江山直营点",
+								"parentId": "25",
+								"principalArea": "330881",
+								"status": "0",
+								"type": "2"
+							}, {
+								"area": "330825",
+								"code": "000100010002",
+								"hasChild": "0",
+								"id": 34,
+								"isEnd": "1",
+								"name": "浙江金爱农龙游分公司",
+								"parentId": "25",
+								"principalArea": "330825",
+								"status": "0",
+								"type": "2"
+							}, {
+								"area": "330822",
+								"code": "000100010003",
+								"guaranteed": "00",
+								"hasChild": "0",
+								"id": 36,
+								"isEnd": "1",
+								"name": "常山分公司",
+								"parentId": "25",
+								"principalArea": "330822",
+								"status": "0",
+								"type": "2"
+							}
+						]
+					}, {
+						"area": "330100",
+						"code": "00010002",
+						"guaranteed": "00010002",
+						"hasChild": "1",
+						"id": 37,
+						"isEnd": "0",
+						"name": "杭州市分公司",
+						"parentId": "24",
+						"principalArea": "330100",
+						"status": "0",
+						"type": "1",
+						"children": [
+							{
+								"area": "330110",
+								"code": "000100020002",
+								"guaranteed": "001",
+								"hasChild": "0",
+								"id": 42,
+								"isEnd": "1",
+								"name": "余杭区分公司",
+								"parentId": "37",
+								"principalArea": "330110",
+								"status": "0",
+								"type": "2"
+							}
+						]
+					}
+				]
+			}, {
+				"area": "320200",
+				"code": "0003",
+				"guaranteed": "111111",
+				"hasChild": "1",
+				"id": 31,
+				"isEnd": "0",
+				"name": "江苏金爱农网络科技有限公司",
+				"parentId": "1",
+				"principalArea": "320000",
+				"status": "0",
+				"type": "0",
+				"children": [
+					{
+						"area": "320300",
+						"code": "00030001",
+						"hasChild": "1",
+						"id": 32,
+						"isEnd": "0",
+						"name": "江苏徐州金爱农网络技术有限公司",
+						"parentId": "31",
+						"principalArea": "320300",
+						"status": "0",
+						"type": "1"
+					}
+				]
+			}, {
+				"area": "130208",
+				"code": "0004",
+				"guaranteed": "123456",
+				"hasChild": "0",
+				"id": 40,
+				"isEnd": "0",
+				"name": "测试公司",
+				"parentId": "1",
+				"principalArea": "130000",
+				"status": "0",
+				"type": "0"
+			}, {
+				"area": "130000",
+				"code": "0005",
+				"guaranteed": "00",
+				"hasChild": "1",
+				"id": 43,
+				"isEnd": "0",
+				"name": "河北总公司",
+				"parentId": "1",
+				"principalArea": "130000",
+				"status": "0",
+				"type": "0",
+				"children": [
+					{
+						"area": "130200",
+						"code": "00050001",
+						"guaranteed": "00050001",
+						"hasChild": "1",
+						"id": 44,
+						"isEnd": "0",
+						"name": "唐山市分公司",
+						"parentId": "43",
+						"principalArea": "130200",
+						"status": "0",
+						"type": "1",
+						"children": [
+							{
+								"area": "130207",
+								"code": "000500010001",
+								"guaranteed": "000500010001",
+								"hasChild": "0",
+								"id": 45,
+								"isEnd": "1",
+								"name": "丰南区分公司",
+								"parentId": "44",
+								"principalArea": "130207",
+								"status": "0",
+								"type": "2"
+							}
+						]
+					}
+				]
+			}, {
+				"area": "320000",
+				"code": "0006",
+				"guaranteed": "0006",
+				"hasChild": "1",
+				"id": 46,
+				"isEnd": "0",
+				"name": "江苏竹艮网络科技有限公司",
+				"parentId": "1",
+				"principalArea": "320000",
+				"status": "0",
+				"type": "0",
+				"children": [
+					{
+						"area": "320400",
+						"code": "00060001",
+						"guaranteed": "0006",
+						"hasChild": "0",
+						"id": 47,
+						"isEnd": "1",
+						"name": "江苏竹艮网络科技有限公司常州分公司",
+						"parentId": "46",
+						"principalArea": "320400,320404,320402,320411,320412,320413,320481",
+						"status": "0",
+						"type": "1"
+					}, {
+						"area": "321200",
+						"code": "00060002",
+						"guaranteed": "0006",
+						"hasChild": "0",
+						"id": 48,
+						"isEnd": "1",
+						"name": "江苏竹艮网络科技有限公司泰州分公司",
+						"parentId": "46",
+						"principalArea": "321200",
+						"status": "0",
+						"type": "1"
+					}
+				]
+			}
+		]
+	}
+]
