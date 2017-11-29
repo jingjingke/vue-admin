@@ -14,10 +14,10 @@
 		</SearchWarp>
 		<ContentWarp>
 			<el-table border stripe :data='searchInfo.list' size='small'>
-				<el-table-column align='center' label="日期" prop='addDate' />
-				<el-table-column align='center' label="流程名称" prop='processName' />
-				<el-table-column align='center' label="定义名称" prop='definedName' />
-				<el-table-column align='center' label="操作">
+				<el-table-column align='center' label="流程名称" prop='processName' min-width='200px' />
+				<el-table-column align='center' label="定义名称" prop='definedName' min-width='200px' />
+				<el-table-column align='center' label="日期" prop='addDate' width='140' />
+				<el-table-column align='center' label="操作" width='180'>
 					<template slot-scope="scope">
 						<el-button size="mini" icon="el-icon-search" @click='$imgPreview([scope.row.litpic,scope.row.processName])'>查看流程图</el-button>
 					</template>

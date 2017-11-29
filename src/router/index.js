@@ -30,15 +30,15 @@ export default new Router({
 			redirect: 'group/company'
 		}, {
 			path: 'group/company', //组织架构-公司管理
-			component: resolve => require(['@/view/group/CompanyWarp.vue'], resolve),
+			component: resolve => require(['@/view/group/company/Warp.vue'], resolve),
 			children: [{
 				path: '/', //无路径时默认跳到登录页
 				name: 'GroupCompany',
-				component: resolve => require(['@/view/group/Company.vue'], resolve)
+				component: resolve => require(['@/view/group/company/Company.vue'], resolve)
 			},{
 				path: 'staff', //无路径时默认跳到登录页
 				name: 'GroupStaff',
-				component: resolve => require(['@/view/group/Staff.vue'], resolve)
+				component: resolve => require(['@/view/group/company/Staff.vue'], resolve)
 			}]
 		}, {
 			path: 'group/role', //组织架构-角色管理

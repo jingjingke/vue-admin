@@ -17,14 +17,14 @@
 		</SearchWarp>
 		<ContentWarp>
 			<el-table border stripe :data='searchInfo.list' size='small'>
-				<el-table-column align='center' label="产品名称" prop='productName' />
-				<el-table-column align='center' label="产品编码" prop='productCode' />
-				<el-table-column align='center' label="公司" prop='companyName' />
-				<el-table-column align='center' label="流程名称" prop='processName' />
-				<el-table-column align='center' label="定义名称" prop='definedName' />
-				<el-table-column align='center' label="状态" prop='status' :formatter='formatValue' />
-				<el-table-column align='center' label="是否分配" prop='isAutoCreated' :formatter='formatValue' />
-				<el-table-column align='center' label="操作">
+				<el-table-column align='center' label="产品名称" prop='productName' min-width='120px' />
+				<el-table-column align='center' label="产品编码" prop='productCode' width='100' />
+				<el-table-column align='center' label="公司" prop='companyName' min-width='340px' />
+				<el-table-column align='center' label="流程名称" prop='processName' min-width='200px' />
+				<el-table-column align='center' label="定义名称" prop='definedName' min-width='200px' />
+				<el-table-column align='center' label="状态" prop='status' :formatter='formatValue' width='60' />
+				<el-table-column align='center' label="是否分配" prop='isAutoCreated' :formatter='formatValue' width='80' />
+				<el-table-column align='center' label="操作" min-width='200px' >
 					<template slot-scope="scope">
 						<el-button size="mini" type="primary" icon="el-icon-edit" plain @click='openChange(scope.row)'>修改</el-button>
 						<el-button size="mini" :type="scope.row.status===0?'success':'danger'" plain @click='openStatus(scope.row)'>{{scope.row.status===0?'启用':'禁用'}}</el-button>
