@@ -6,9 +6,11 @@ import router from './router'
 
 //单独使用element组件
 import {
-  Row,Col,Tree,Upload,Dialog,Pagination,Table,TableColumn,Breadcrumb,BreadcrumbItem,Menu,Submenu,MenuItem,MenuItemGroup,Dropdown,DropdownMenu,DropdownItem,MessageBox,Message,Radio,RadioGroup,Input,Option,Select,Button,Form,FormItem,Container,Header,Aside,Main,Footer
+  Tag,Cascader,Row,Col,Tree,Upload,Dialog,Pagination,Table,TableColumn,Breadcrumb,BreadcrumbItem,Menu,Submenu,MenuItem,MenuItemGroup,Dropdown,DropdownMenu,DropdownItem,MessageBox,Message,Radio,RadioGroup,Input,Option,Select,Button,Form,FormItem,Container,Header,Aside,Main,Footer
 } from 'element-ui'
 
+Vue.use(Tag)
+Vue.use(Cascader)
 Vue.use(Row)
 Vue.use(Col)
 Vue.use(Tree)

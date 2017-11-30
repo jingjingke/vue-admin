@@ -5,21 +5,51 @@ export default {
 	data() {
 		return {
 			searchInfo: { //存放查询表单及列表数据
-				list: [],
-				form: {
-					productCode: '',
-					companyCode: '',
-					processId: ''
-				}
+				list: []
 			},
 			addInfo: { //存放新增窗口显示状态及它的表单数据
 				isOpen: false,
 				form: {
-					productCode: '',
-					companyCode: '',
-					processId: ''
+					name: '',
+					code: '',
+					guaranteed: '',
+					isEnd: '',
+					area: '',
+					principalArea: ''
 				}
 			},
+			addChildRules: {
+				name: [{
+					required: true,
+					message: '公司名称不能为空',
+					trigger: 'change'
+				}],
+				code: [{
+					required: true,
+					message: '公司编码不能为空',
+					trigger: 'change'
+				}],
+				guaranteed: [{
+					required: true,
+					message: '投资担保账户不能为空',
+					trigger: 'change'
+				}],
+				isEnd: [{
+					required: true,
+					message: '请选择是否为最终节点',
+					trigger: 'change'
+				}],
+				area: [{
+					required: true,
+					message: '请选择并确认地址区域',
+					trigger: 'change'
+				}],
+				principalArea: [{
+					required: true,
+					message: '请选择并添加负责区域',
+					trigger: 'change'
+				},]
+			}
 		}
 	},
 	methods: {
@@ -44,6 +74,25 @@ export default {
 					value: "启用"
 				}]);
 			}
+		},
+		//新增ajax
+		sendAddAjax(formName) {
+			this.$refs[formName].validate((valid) => {
+				//字段验证是否成功
+				if(valid) {
+					console.log('在此发送addInfo.form数据')
+					console.log(this.addInfo.form)
+				} else {
+					return false;
+				}
+			})
+		},
+		//重置新值数据-关闭窗口
+		resetAddInfo() {
+			//清空表单
+			this.resetForm('formByAdd')
+			//关闭窗口
+			this.addInfo.isOpen = false
 		},
 	},
 	mounted() {

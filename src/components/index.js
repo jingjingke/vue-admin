@@ -9,6 +9,7 @@ import SelectCompany from "./form/SelectCompany";
 import SelectProduct from "./form/SelectProduct";
 import SelectProcess from "./form/SelectProcess";
 import SelectRole from "./form/SelectRole";
+import SelectAddress from "./form/SelectAddress";
 
 export default {
 	Header,
@@ -19,5 +20,6 @@ export default {
 	SelectCompany,
 	SelectProduct,
 	SelectProcess,
-	SelectRole
+	SelectRole,
+	SelectAddress
 }
