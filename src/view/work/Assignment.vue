@@ -38,7 +38,7 @@
 		</ContentWarp>
 
 		<!--新增窗口-->
-		<el-dialog title="新增流程分配" width='600px' center :visible.sync='addInfo.isOpen' :show-close='false' :before-close='resetAddInfo'>
+		<el-dialog title="新增流程分配" width='600px' center :visible.sync='addInfo.isOpen' :show-close='false'>
 			<el-form :model="addInfo.form" ref='formByAdd' :rules="rules" label-width="80px">
 				<el-form-item label="所属产品" prop='productCode'>
 					<SelectProduct v-model="addInfo.form.productCode"></SelectProduct>
@@ -66,7 +66,7 @@
 		</el-dialog>
 
 		<!--修改窗口-->
-		<el-dialog title="修改流程分配" width='600px' center :visible.sync='changeInfo.isOpen' :show-close='false' :before-close='resetChangeInfo'>
+		<el-dialog title="修改流程分配" width='600px' center :visible.sync='changeInfo.isOpen' :show-close='false'>
 			<el-form :model="changeInfo.form" ref='formByChange' :rules="rules" label-width="80px">
 				<el-form-item label="所属产品" prop='productCode'>
 					<SelectProduct v-model="changeInfo.form.productCode"></SelectProduct>

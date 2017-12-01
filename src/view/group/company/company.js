@@ -1,9 +1,15 @@
 import listData from '@/data/list/group-company.json';
+import bangDepartment from '@/data/all/companyDepartment.json';
+import bangRole from '@/data/all/companyRole.json';
 
 export default {
 	name: 'GroupCompany',
 	data() {
 		return {
+			companyData: {
+				id: 1,
+				name: '总公司'
+			},
 			searchInfo: { //存放查询表单及列表数据
 				list: []
 			},
@@ -15,10 +21,27 @@ export default {
 					guaranteed: '',
 					isEnd: '',
 					area: '',
-					principalArea: ''
+					principalArea: '',
+					parentId: '' //******从当前所在公司数据取得
 				}
 			},
-			addChildRules: {
+			changeInfo: {
+				isOpen: false,
+				form: {}
+			},
+			statusInfo: {
+				isOpen: false,
+				form: {}
+			},
+			bangDepartment: {
+				isOpen: false,
+				list: []
+			},
+			bangRole: {
+				isOpen: false,
+				list: []
+			},
+			companyRules: {
 				name: [{
 					required: true,
 					message: '公司名称不能为空',
@@ -48,7 +71,7 @@ export default {
 					required: true,
 					message: '请选择并添加负责区域',
 					trigger: 'change'
-				},]
+				}, ]
 			}
 		}
 	},
@@ -94,6 +117,134 @@ export default {
 			//关闭窗口
 			this.addInfo.isOpen = false
 		},
+		//打开修改窗口
+		openChange(obj) {
+			this.changeInfo.isOpen = true;
+			setTimeout(() => {
+				//去掉表单验证处带颜色的边框先
+				this.$refs['formByChange'].resetFields()
+				//提取列表中的值
+				this.changeInfo.form = {
+					name: obj.name,
+					code: obj.code,
+					guaranteed: obj.guaranteed,
+					isEnd: obj.isEnd,
+					area: obj.area,
+					principalArea: obj.principalArea,
+					parentId: obj.parentId,
+					parentName: obj.parentName,
+					areaName: obj.areaName,
+					principalAreaName: obj.principalAreaName
+				}
+			}, 100)
+		},
+		//修改ajax
+		sendChangeAjax(formName) {
+			this.$refs[formName].validate((valid) => {
+				//字段验证是否成功
+				if(valid) {
+					console.log('在此发送changeInfo.form数据')
+					console.log(this.changeInfo.form)
+				} else {
+					return false;
+				}
+			})
+		},
+		//重置修改窗口
+		resetChangeInfo() {
+			//清空表单
+			this.$refs['formByChange'].resetFields()
+			//关闭窗口
+			this.changeInfo.isOpen = false
+		},
+		//打开启用禁用窗口
+		openStatus(obj) {
+			console.log(obj)
+			this.statusInfo = {
+				isOpen: true,
+				form: obj
+			}
+		},
+		//启用禁用ajax
+		sendStatusAjax() {
+			console.log('确认启用或禁用')
+		},
+		//点击分配部门
+		openDepartment(id) {
+			//实际需要根据id经过ajax取得绑定的部门
+			this.bangDepartment = {
+				isOpen: true,
+				list: bangDepartment
+			}
+			//初始默认选中的情况
+			setTimeout(()=>{
+				this.checkBangDefault('bangDepartment',bangDepartment)
+			},100)
+		},
+		//公司绑定部门发送ajax
+		sendDepartmentAjax() {
+			console.log('绑定部门---实际上是发送this.bangDepartment.list经过修改后的数据')
+			console.log(JSON.stringify(this.bangDepartment.list))
+			//this.closeBang('bangDepartment')//关闭时
+		},
+		//分配部分发生变化时--实时
+		selectDepartmentChange(value) {
+			this.checkBangStatus(value, this.bangDepartment.list)
+		},
+		//点击分配角色
+		openRole(id) {
+			//实际需要根据id经过ajax取得绑定的角色
+			this.bangRole = {
+				isOpen: true,
+				list: bangRole
+			}
+			//初始默认选中的情况
+			setTimeout(()=>{
+				this.checkBangDefault('bangRole',bangRole)
+			},100)
+		},
+		//关闭绑定部门或角色窗口
+		closeBang(name) {
+			this.bangDepartment.isOpen = false;
+			this.bangRole.isOpen = false;
+			this.$refs[name].clearSelection();
+		},
+		//公司绑定角色发送ajax
+		sendRoleAjax() {
+			console.log('绑定角色---实际上是发送this.bangRole.list经过修改后的数据')
+			console.log(JSON.stringify(this.bangRole.list))
+			//this.closeBang('bangRole')//关闭时
+		},
+		//分配角色选择发生变化时
+		selectRoleChange(value) {
+			this.checkBangStatus(value, this.bangRole.list)
+		},
+		//检查并调整绑定部门或角色
+		checkBangStatus(selectObj, allObj) {
+			//将选择项的ID整成一个数组
+			let arr = [];
+			for(let i = 0; i < selectObj.length; i++) {
+				arr.push(selectObj[i].id)
+			}
+			//循环对象，如果ID在arr中，则bang的状态调1否0
+			for(let i = 0; i < allObj.length; i++) {
+				allObj[i].bangStatus = arr.indexOf(allObj[i].id) >= 0 ? '1' : '0'
+			}
+		},
+		//过滤并初始化刚打开绑定窗口时选择状态
+		checkBangDefault(formname,arr){
+			let newArr = []
+			for(let i = 0 ; i<arr.length; i++){
+				if(arr[i].bangStatus === '1'){
+					newArr.push(arr[i])
+				}
+			}
+			if(newArr.length > 0){
+				newArr.forEach(row=>{
+					this.$refs[formname].toggleRowSelection(row);
+				})
+			}
+		}
 	},
 	mounted() {
 		//查询默认列表

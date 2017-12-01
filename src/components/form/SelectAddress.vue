@@ -51,7 +51,8 @@
 		},
 		watch: {
 			'prov': 'provChange',
-			'city': 'cityChange'
+			'city': 'cityChange',
+			'value':'checkValue'
 		},
 		props: ['value', 'name', 'multiple', 'btnText'],
 		methods: {
@@ -169,28 +170,30 @@
 				this.nameList.splice(index, 1)
 				this.codeList.splice(index, 1)
 				this.$emit('input', String(this.codeList))
+			},
+			//监听并检查value值变化情况
+			checkValue(value){
+				//初始化结果的值  -- 挂载时先判断传过来的值不为空时
+				if(typeof value === 'string' && value !== '' && value !== String(this.codeList)) {
+					//整理数据
+					let nameArr = [];
+					let codeArr = value.split(',');
+					let propsName = this.$options.propsData.name;
+					if(typeof propsName === 'string' && propsName !== '') {
+						//正则替换引号再去分组
+						propsName = propsName.replace(/['|"]/g,'')
+						nameArr = propsName.split(',')
+					}
+					//添加数据
+					for(let i=0; i<codeArr.length; i++){
+						this.codeList.push(codeArr[i]);
+						this.nameList.push(nameArr[i] || codeArr[i])
+					}
+				}
 			}
 		},
 		mounted() {
-			
-			
-			//初始化结果的值  -- 挂载时先判断传过来的值不为空时
-			if(typeof this.value === 'string' && this.value !== '') {
-				//整理数据
-				let nameArr = [];
-				let codeArr = this.value.split(',');
-				let propsName = this.$options.propsData.name;
-				if(typeof propsName === 'string' && propsName !== '') {
-					//正则替换引号再去分组
-					propsName = propsName.replace(/['|"]/g,'')
-					nameArr = propsName.split(',')
-				}
-				//添加数据
-				for(let i=0; i<codeArr.length; i++){
-					this.codeList.push(codeArr[i]);
-					this.nameList.push(nameArr[i] || codeArr[i])
-				}
-			}
+			this.checkValue(this.value);
 		}
 	}
 </script>

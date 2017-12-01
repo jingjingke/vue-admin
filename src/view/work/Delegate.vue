@@ -41,7 +41,7 @@
 		</ContentWarp>
 
 		<!--新增窗口-->
-		<el-dialog title="新增委派规则" width='600px' center :visible.sync='addInfo.isOpen' :show-close='false' :before-close='resetAddInfo'>
+		<el-dialog title="新增委派规则" width='600px' center :visible.sync='addInfo.isOpen' :show-close='false'>
 			<el-form :model="addInfo.form" ref='formByAdd' :rules="rules" label-width="100px">
 				<el-form-item label="选择公司" prop='companyCode'>
 					<SelectCompany v-model="addInfo.form.companyCode"></SelectCompany>
@@ -89,7 +89,7 @@
 		</el-dialog>
 			
 		<!--修改窗口-->
-		<el-dialog title="修改委派规则" width='600px' center :visible.sync='changeInfo.isOpen' :show-close='false' :before-close='resetChangeInfo'>
+		<el-dialog title="修改委派规则" width='600px' center :visible.sync='changeInfo.isOpen' :show-close='false'>
 			<el-form :model="changeInfo.form" ref='formByChange' :rules="rules" label-width="100px">
 				<el-form-item label="选择公司" prop='companyCode'>
 					<SelectCompany v-model="changeInfo.form.companyCode"></SelectCompany>

@@ -30,7 +30,7 @@
 		</ContentWarp>
 		
 		<!--新增窗口-->
-		<el-dialog title="新增流程" width='600px' center :visible.sync='addInfo.isOpen' :show-close='false' :before-close='resetAddInfo'>
+		<el-dialog title="新增流程" width='600px' center :visible.sync='addInfo.isOpen' :show-close='false'>
 			<el-form :model="addInfo.form" ref='formByAdd' :rules="rules" label-width="80px">
 				<el-form-item label="流程名称" prop='name'>
 					<el-input type='text' v-model="addInfo.form.name"></el-input>
