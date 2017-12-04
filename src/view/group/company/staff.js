@@ -142,7 +142,6 @@ export default {
 		},
 		//打开修改窗口
 		openChange(obj) {
-			console.log(obj)
 			this.changeInfo.isOpen = true;
 			setTimeout(() => {
 				//去掉表单验证处带颜色的边框先
@@ -184,7 +183,9 @@ export default {
 		//重置修改窗口
 		resetChangeInfo() {
 			//清空表单
-			this.$refs['formByChange'].resetFields()
+			this.resetForm('formByChange')
+			//清空非必填的
+			this.changeInfo.form.email = '';
 			//关闭窗口
 			this.changeInfo.isOpen = false
 		},
@@ -200,7 +201,7 @@ export default {
 			console.log('确认启用或禁用')
 		},
 		//打开重置密码窗口
-		openStatus(obj) {
+		openPass(obj) {
 			this.passInfo.isOpen = true;
 			this.passInfo.data = obj;
 		},

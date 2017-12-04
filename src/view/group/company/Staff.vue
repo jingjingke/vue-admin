@@ -32,7 +32,7 @@
 				<el-table-column align='center' label="操作" min-width='350px'>
 					<template slot-scope="scope">
 						<el-button size="mini" type="primary" icon="el-icon-edit" plain @click='openChange(scope.row)'>修改</el-button>
-						<el-button size="mini" type="warning" plain @click='openStatus(scope.row)'>重置密码</el-button>
+						<el-button size="mini" type="warning" plain @click='openPass(scope.row)'>重置密码</el-button>
 						<el-button size="mini" :type="scope.row.status==='1'?'success':'danger'" plain @click='openStatus(scope.row)'>{{scope.row.status==='1'?'启用':'禁用'}}</el-button>
 						<el-button size="mini" plain>二维码</el-button>
 					</template>
@@ -105,15 +105,13 @@
 						</template>
 					</el-select>
 				</el-form-item>
-				<template v-if='changeInfo.form.roleIdList !== undefined'>
-					<el-form-item label="所属角色" prop='roleIdList'>
-						<el-select v-model='changeInfo.form.roleIdList' multiple>
-							<template v-for="option of roleList">
-								<el-option :label='option.name' :value='option.id'></el-option>
-							</template>
-						</el-select>
-					</el-form-item>
-				</template>
+				<el-form-item label="所属角色" prop='roleIdList'>
+					<el-select v-model='changeInfo.form.roleIdList' multiple>
+						<template v-for="option of roleList">
+							<el-option :label='option.name' :value='option.id'></el-option>
+						</template>
+					</el-select>
+				</el-form-item>
 			</el-form>
 			<div slot="footer" class="dialog-footer">
 				<el-button type="primary" @click="sendChangeAjax('formByChange')">修 改</el-button>
