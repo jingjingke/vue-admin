@@ -17,7 +17,8 @@
 		"status": "0",
 		"type": "0",
 		"updateTime": 1498555209000,
-		"updateUserId": "22"
+		"updateUserId": "22",
+		"twoDimensionCodeImageUrl":"http://cgtzimage.b0.upaiyun.com/matrix/image/000000000000000B.png"
 	}, {
 		"area": "370000",
 		"areaName": "山东省",
@@ -36,7 +37,8 @@
 		"status": "1",
 		"type": "0",
 		"updateTime": 1508320815000,
-		"updateUserId": "149"
+		"updateUserId": "149",
+		"twoDimensionCodeImageUrl":"http://cgtzimage.b0.upaiyun.com/matrix/image/000000000000000B.png"
 	}, {
 		"area": "320200",
 		"areaName": "无锡市",
@@ -55,7 +57,8 @@
 		"status": "0",
 		"type": "0",
 		"updateTime": 1498559109000,
-		"updateUserId": "22"
+		"updateUserId": "22",
+		"twoDimensionCodeImageUrl":"http://cgtzimage.b0.upaiyun.com/matrix/image/000000000000000B.png"
 	}, {
 		"area": "130208",
 		"areaName": "丰润区",
@@ -74,7 +77,8 @@
 		"status": "0",
 		"type": "0",
 		"updateTime": 1498616067000,
-		"updateUserId": "22"
+		"updateUserId": "22",
+		"twoDimensionCodeImageUrl":"http://cgtzimage.b0.upaiyun.com/matrix/image/000000000000000B.png"
 	}, {
 		"area": "130000",
 		"areaName": "河北省",
@@ -91,7 +95,8 @@
 		"principalArea": "130000",
 		"principalAreaName": "河北省",
 		"status": "0",
-		"type": "0"
+		"type": "0",
+		"twoDimensionCodeImageUrl":"http://cgtzimage.b0.upaiyun.com/matrix/image/000000000000000B.png"
 	}, {
 		"area": "320000",
 		"areaName": "江苏省",
@@ -108,6 +113,7 @@
 		"principalArea": "320000",
 		"principalAreaName": "江苏省",
 		"status": "0",
-		"type": "0"
+		"type": "0",
+		"twoDimensionCodeImageUrl":"http://cgtzimage.b0.upaiyun.com/matrix/image/000000000000000B.png"
 	}
 ]

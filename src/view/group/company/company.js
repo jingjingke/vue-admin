@@ -8,7 +8,9 @@ export default {
 		return {
 			companyData: {
 				id: 1,
-				name: '总公司'
+				name: '总公司',
+				code:'001',
+				twoDimensionCodeImageUrl:"http://cgtzimage.b0.upaiyun.com/matrix/image/000000000000000B.png"
 			},
 			searchInfo: { //存放查询表单及列表数据
 				list: []
@@ -76,9 +78,6 @@ export default {
 		}
 	},
 	methods: {
-		handleNodeClick(data) {
-			console.log(data);
-		},
 		//查询列表
 		getListAjax() {
 			console.log("发送ajax查询数据或分页规则处理")
@@ -159,7 +158,6 @@ export default {
 		},
 		//打开启用禁用窗口
 		openStatus(obj) {
-			console.log(obj)
 			this.statusInfo = {
 				isOpen: true,
 				form: obj

@@ -9,7 +9,8 @@ export default {
 			companyData: {
 				id: 1,
 				name: '总公司',
-				code:'001'
+				code:'001',
+				twoDimensionCodeImageUrl:"http://cgtzimage.b0.upaiyun.com/matrix/image/000000000000000B.png"
 			},
 			departmentList:[],
 			roleList:[],

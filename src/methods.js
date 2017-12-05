@@ -1,5 +1,6 @@
 //引入调用图像预览的组件
 import ImgPreview from '@/components/imgPreview/index.js';
+import qrCode from '@/components/qrCode/index.js';
 
 var methods = {
 	//重置表达数据
@@ -8,6 +9,8 @@ var methods = {
 	},
 	//全局-查看图片
 	$imgPreview:ImgPreview,
+	//全局-查看二维码
+	$qr:qrCode,
 	//精确小数点位置
 	fomatFloat(value,pos){
 		return Math.round(value*Math.pow(10, pos))/Math.pow(10, pos);

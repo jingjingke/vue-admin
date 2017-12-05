@@ -11,7 +11,7 @@
 						<el-button plain @click='openChange(companyData)'>修改</el-button>
 						<el-button type="danger" plain @click='openStatus(companyData)'>禁用</el-button>
 					</template>
-					<el-button plain>二维码</el-button>
+					<el-button plain @click='$qr([companyData.twoDimensionCodeImageUrl,companyData.name])'>二维码</el-button>
 				</el-form-item>
 			</el-form>
 		</SearchWarp>
@@ -32,7 +32,7 @@
 					<el-button size="mini" plain @click='openRole(scope.row.id)'>分配角色</el-button>
 					<el-button size="mini" type="primary" plain disabled>员工管理</el-button>
 					<el-button size="mini" :type="scope.row.status==='1'?'success':'danger'" plain @click='openStatus(scope.row)'>{{scope.row.status==='1'?'启用':'禁用'}}</el-button>
-					<el-button size="mini" plain>二维码</el-button>
+					<el-button size="mini" plain @click='$qr([scope.row.twoDimensionCodeImageUrl,scope.row.name])'>二维码</el-button>
 				</template>
 			</el-table-column>
 		</el-table>

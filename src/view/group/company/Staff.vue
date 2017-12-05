@@ -34,7 +34,7 @@
 						<el-button size="mini" type="primary" icon="el-icon-edit" plain @click='openChange(scope.row)'>修改</el-button>
 						<el-button size="mini" type="warning" plain @click='openPass(scope.row)'>重置密码</el-button>
 						<el-button size="mini" :type="scope.row.status==='1'?'success':'danger'" plain @click='openStatus(scope.row)'>{{scope.row.status==='1'?'启用':'禁用'}}</el-button>
-						<el-button size="mini" plain>二维码</el-button>
+						<el-button size="mini" plain @click='$qr([scope.row.twoDimensionCodeImageUrl,scope.row.name])'>二维码</el-button>
 					</template>
 				</el-table-column>
 			</el-table>
@@ -65,7 +65,7 @@
 				<el-form-item label="所在部门" prop='departmentId'>
 					<el-select v-model='addInfo.form.departmentId' clearable>
 						<template v-for="option of departmentList">
-							<el-option :label='option.name' :value='option.id'></el-option>
+							<el-option :label='option.name' :value='option.id' ></el-option>
 						</template>
 					</el-select>
 				</el-form-item>
@@ -118,7 +118,7 @@
 				<el-button @click="resetChangeInfo">取 消</el-button>
 			</div>
 		</el-dialog>
-		
+
 		<!--修改密码单独的窗口-->
 		<el-dialog :title="'正在修改 ' + passInfo.data.name + ' 的密码'" width='600px' center :visible.sync='passInfo.isOpen' :show-close='false'>
 			<el-form :model="passInfo.form" ref='formByPass' :rules="rules" label-width="80px">
@@ -134,7 +134,7 @@
 				<el-button @click="resetPassInfo">取 消</el-button>
 			</div>
 		</el-dialog>
-		
+
 		<!--禁用或启用窗口-->
 		<el-dialog :title="statusInfo.form.status==='1'?'启用':'禁用'" width='600px' center :visible.sync='statusInfo.isOpen' :show-close='false'>
 			<p class="text-center">确定{{statusInfo.form.status==='1'?'启用':'禁用'}}<span class="text-red"> {{statusInfo.form.name}}（{{statusInfo.form.loginAccount}}） </span>吗？</p>
@@ -143,6 +143,7 @@
 				<el-button @click="statusInfo.isOpen = false">取 消</el-button>
 			</div>
 		</el-dialog>
+
 
 	</el-col>
 </template>
