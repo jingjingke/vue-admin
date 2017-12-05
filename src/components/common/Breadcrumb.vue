@@ -2,6 +2,7 @@
 	<el-breadcrumb separator="/">
 		<el-breadcrumb-item :to="{path:'/'+startRoute}">{{startName}}</el-breadcrumb-item>
 		<el-breadcrumb-item>{{endName}}</el-breadcrumb-item>
+		<slot></slot>
 	</el-breadcrumb>
 </template>
 

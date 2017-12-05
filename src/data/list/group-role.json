@@ -1,0 +1,89 @@
+[
+	{
+		"createTime": "2017-06-29 20:04:05",
+		"createUserId": "1",
+		"hideLevel": 0,
+		"id": 25,
+		"name": "副总经理",
+		"status": "0",
+		"type": "1"
+	}, {
+		"createTime": "2017-06-28 14:40:39",
+		"createUserId": "1",
+		"hideLevel": 0,
+		"id": 24,
+		"name": "市级指派员",
+		"status": "0",
+		"type": "0"
+	}, {
+		"createTime": "2017-06-23 13:20:52",
+		"createUserId": "1",
+		"hideLevel": 0,
+		"id": 22,
+		"name": "市级管理员",
+		"status": "0",
+		"type": "0"
+	}, {
+		"createTime": "2017-06-21 11:07:46",
+		"createUserId": "4",
+		"hideLevel": 100,
+		"id": 21,
+		"name": "超级管理员",
+		"status": "0",
+		"type": "0"
+	}, {
+		"createTime": "2017-06-20 10:11:09",
+		"createUserId": "1",
+		"hideLevel": 0,
+		"id": 20,
+		"name": "省级风控",
+		"roleNo": "0010",
+		"status": "0",
+		"type": "1"
+	}, {
+		"createTime": "2017-06-06 18:45:44",
+		"createUserId": "1",
+		"hideLevel": 90,
+		"id": 10,
+		"name": "市级财务",
+		"roleNo": "0009",
+		"status": "0",
+		"type": "2"
+	}, {
+		"createTime": "2017-06-06 18:45:41",
+		"createUserId": "1",
+		"hideLevel": 80,
+		"id": 9,
+		"name": "县级内务",
+		"roleNo": "0008",
+		"status": "0",
+		"type": "3"
+	}, {
+		"createTime": "2017-06-06 18:45:39",
+		"createUserId": "1",
+		"hideLevel": 99,
+		"id": 8,
+		"name": "总经理",
+		"roleNo": "0007",
+		"status": "0",
+		"type": "1"
+	}, {
+		"createTime": "2017-06-06 18:45:37",
+		"createUserId": "1",
+		"hideLevel": 98,
+		"id": 7,
+		"name": "市级负责人",
+		"roleNo": "0006",
+		"status": "0",
+		"type": "2"
+	}, {
+		"createTime": "2017-06-06 17:07:20",
+		"createUserId": "1",
+		"hideLevel": 90,
+		"id": 6,
+		"name": "市级风控",
+		"roleNo": "0005",
+		"status": "0",
+		"type": "2"
+	}
+]

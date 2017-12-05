@@ -43,7 +43,11 @@ export default new Router({
 		}, {
 			path: 'group/role', //组织架构-角色管理
 			name: 'GroupRole',
-			component: resolve => require(['@/view/group/Role.vue'], resolve)
+			component: resolve => require(['@/view/group/role/Role.vue'], resolve)
+		},{
+			path: 'group/role/power/:id', //组织架构-角色管理
+			name: 'GroupRolePower',
+			component: resolve => require(['@/view/group/role/Power.vue'], resolve)
 		}, {
 			path: 'group/department', //组织架构-部门管理
 			name: 'GroupDepartment',
