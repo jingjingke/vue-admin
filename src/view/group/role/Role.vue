@@ -20,6 +20,7 @@
 		</SearchWarp>
 		<ContentWarp>
 			<el-table border stripe :data='searchInfo.list' size='small'>
+				<el-table-column align='center' label="ID" prop='id' width='80' />
 				<el-table-column align='center' label="角色名称" prop='name' min-width='160' />
 				<el-table-column align='center' label="分类" prop='type' :formatter='formatValue' />
 				<el-table-column align='center' label="资料等级" prop='hideLevel' />
