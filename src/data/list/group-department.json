@@ -1,0 +1,38 @@
+[
+	{
+		"description": "内务1",
+		"id": 43,
+		"name": "内务部",
+		"status": "0"
+	}, {
+		"description": "风控",
+		"id": 42,
+		"name": "风控部",
+		"status": "0"
+	}, {
+		"description": "超级",
+		"id": 41,
+		"name": "超级管理员",
+		"status": "0"
+	}, {
+		"description": "核算支持",
+		"id": 36,
+		"name": "财务部",
+		"status": "0"
+	}, {
+		"description": "管理",
+		"id": 35,
+		"name": "总经理",
+		"status": "0"
+	}, {
+		"description": "外访支持",
+		"id": 34,
+		"name": "外访部",
+		"status": "0"
+	}, {
+		"description": "业务支持",
+		"id": 33,
+		"name": "业务部",
+		"status": "0"
+	}
+]

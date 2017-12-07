@@ -10,6 +10,10 @@
 .el-dialog .el-select {
 	width: 100%;
 }
+.el-textarea__inner {
+	font-family: "微软雅黑";
+	font-size: 13px;
+}
 
 .text-center {
 	text-align: center;

@@ -27,7 +27,7 @@
 				<el-table-column align='center' label="操作" width='260px' >
 					<template slot-scope="scope">
 						<el-button size="mini" type="primary" icon="el-icon-edit" plain @click='openChange(scope.row)'>修改</el-button>
-						<el-button size="mini" type="success" icon="el-icon-edit" plain @click='$router.push("/group/role/power/"+scope.row.id)'>分配权限</el-button>
+						<el-button size="mini" type="success" plain @click='$router.push("/group/role/power/"+scope.row.id)'>分配权限</el-button>
 					</template>
 				</el-table-column>
 			</el-table>
