@@ -1,0 +1,331 @@
+[
+	{
+		"children": [
+			{
+				"id": 2,
+				"name": "任务概况",
+				"parentId": "1",
+				"seq": 0,
+				"type": "1"
+			}, {
+				"id": 3,
+				"name": "我的任务",
+				"parentId": "1",
+				"seq": 1,
+				"type": "1"
+			}, {
+				"id": 9,
+				"name": "任务派发",
+				"parentId": "1",
+				"seq": 2,
+				"type": "1"
+			}
+		],
+		"id": 1,
+		"name": "任务管理",
+		"seq": 0,
+		"type": "0"
+	}, {
+		"children": [
+			{
+				"id": 234,
+				"name": "加盟商查询",
+				"parentId": "232",
+				"seq": 0,
+				"type": "1"
+			}, {
+				"id": 235,
+				"name": "总部阈值管理",
+				"parentId": "232",
+				"seq": 1,
+				"type": "1"
+			}, {
+				"id": 233,
+				"name": "工作流程管理",
+				"parentId": "232",
+				"seq": 2,
+				"type": "1"
+			}
+		],
+		"id": 232,
+		"name": "加盟商管理",
+		"parentId": "",
+		"seq": 18,
+		"type": "0"
+	}, {
+		"children": [
+			{
+				"id": 15,
+				"name": "公司管理",
+				"parentId": "14",
+				"seq": 0,
+				"type": "1"
+			}, {
+				"id": 16,
+				"name": "角色管理",
+				"parentId": "14",
+				"seq": 1,
+				"type": "1"
+			}, {
+				"id": 17,
+				"name": "部门管理",
+				"parentId": "14",
+				"seq": 2,
+				"type": "1"
+			}, {
+				"id": 20,
+				"name": "权限管理",
+				"parentId": "14",
+				"seq": 3,
+				"type": "1",
+				"updateUserId": "20"
+			}
+		],
+		"id": 14,
+		"name": "组织架构",
+		"seq": 11,
+		"type": "0"
+	}, {
+		"children": [
+			{
+				"id": 213,
+				"name": "案件列表",
+				"parentId": "212",
+				"seq": 1,
+				"type": "1"
+			}, {
+				"id": 214,
+				"name": "所有未催",
+				"parentId": "212",
+				"seq": 2,
+				"type": "1"
+			}, {
+				"id": 215,
+				"name": "所有已催",
+				"parentId": "212",
+				"seq": 3,
+				"type": "1"
+			}, {
+				"id": 216,
+				"name": "答应会还",
+				"parentId": "212",
+				"seq": 4,
+				"type": "1"
+			}, {
+				"id": 218,
+				"name": "重点关注",
+				"parentId": "212",
+				"seq": 5,
+				"type": "1"
+			}, {
+				"id": 219,
+				"name": "关注",
+				"parentId": "212",
+				"seq": 6,
+				"type": "1"
+			}, {
+				"id": 220,
+				"name": "暂停催收",
+				"parentId": "212",
+				"seq": 7,
+				"type": "1"
+			}, {
+				"id": 221,
+				"name": "1~3天未电催",
+				"parentId": "212",
+				"seq": 8,
+				"type": "1"
+			}, {
+				"id": 222,
+				"name": "4~7天未电催",
+				"parentId": "212",
+				"seq": 9,
+				"type": "1"
+			}, {
+				"id": 223,
+				"name": "7天以上未电催",
+				"parentId": "212",
+				"seq": 10,
+				"type": "1"
+			}, {
+				"id": 224,
+				"name": "临近退案3天内",
+				"parentId": "212",
+				"seq": 11,
+				"type": "1"
+			}, {
+				"id": 225,
+				"name": "历史已结案件",
+				"parentId": "212",
+				"seq": 12,
+				"type": "1"
+			}
+		],
+		"id": 212,
+		"name": "案件管理",
+		"parentId": "",
+		"seq": 15,
+		"type": "0"
+	}, {
+		"children": [
+			{
+				"id": 5,
+				"name": "用户查询",
+				"parentId": "4",
+				"seq": 0,
+				"type": "1"
+			}
+		],
+		"id": 4,
+		"name": "用户管理",
+		"seq": 2,
+		"type": "0"
+	}, {
+		"children": [
+			{
+				"id": 7,
+				"name": "借款订单查询",
+				"parentId": "6",
+				"seq": 0,
+				"type": "1"
+			}, {
+				"id": 8,
+				"name": "意向单派发",
+				"parentId": "6",
+				"seq": 1,
+				"type": "1"
+			}
+		],
+		"id": 6,
+		"name": "订单管理",
+		"seq": 1,
+		"type": "0"
+	}, {
+		"children": [
+			{
+				"id": 19,
+				"name": "产品设置",
+				"parentId": "18",
+				"seq": 0,
+				"type": "1"
+			}, {
+				"id": 101,
+				"name": "资料配置",
+				"parentId": "18",
+				"seq": 1,
+				"type": "1"
+			}
+		],
+		"id": 18,
+		"name": "产品管理",
+		"seq": 12,
+		"type": "0"
+	}, {
+		"children": [
+			{
+				"id": 173,
+				"name": "模板配置",
+				"parentId": "172",
+				"seq": 0,
+				"type": "1"
+			}, {
+				"id": 174,
+				"name": "模板审核",
+				"parentId": "172",
+				"seq": 1,
+				"type": "1"
+			}, {
+				"id": 175,
+				"name": "模板启用",
+				"parentId": "172",
+				"seq": 2,
+				"type": "1"
+			}
+		],
+		"id": 172,
+		"name": "短信管理",
+		"parentId": "",
+		"seq": 13,
+		"type": "0"
+	}, {
+		"children": [
+			{
+				"id": 184,
+				"name": "案件分类",
+				"parentId": "183",
+				"seq": 0,
+				"type": "1"
+			}, {
+				"id": 185,
+				"name": "策略管理",
+				"parentId": "183",
+				"seq": 1,
+				"type": "1"
+			}, {
+				"id": 186,
+				"name": "用户策略关系",
+				"parentId": "183",
+				"seq": 2,
+				"type": "1"
+			}, {
+				"id": 187,
+				"name": "分配规则",
+				"parentId": "183",
+				"seq": 3,
+				"type": "1"
+			}, {
+				"id": 188,
+				"name": "触发规则",
+				"parentId": "183",
+				"seq": 4,
+				"type": "1"
+			}
+		],
+		"id": 183,
+		"name": "贷后管理",
+		"parentId": "",
+		"seq": 14,
+		"type": "0"
+	}, {
+		"children": [
+			{
+				"id": 11,
+				"name": "流程管理",
+				"parentId": "10",
+				"seq": 0,
+				"type": "1"
+			}, {
+				"id": 12,
+				"name": "产品流程分配",
+				"parentId": "10",
+				"seq": 1,
+				"type": "1"
+			}, {
+				"id": 13,
+				"name": "委派规则配置",
+				"parentId": "10",
+				"seq": 2,
+				"type": "1"
+			}
+		],
+		"id": 10,
+		"name": "工作流设置",
+		"seq": 10,
+		"type": "0"
+	}, {
+		"children": [
+			{
+				"id": 231,
+				"name": "问题案件列表",
+				"parentId": "230",
+				"seq": 0,
+				"type": "1"
+			}
+		],
+		"id": 230,
+		"name": "问题案件管理",
+		"parentId": "",
+		"seq": 16,
+		"type": "0"
+	}
+]
