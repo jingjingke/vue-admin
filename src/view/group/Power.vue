@@ -12,7 +12,7 @@
 					<el-tree :data="powerTree" :props="{children: 'children',label: 'name'}" accordion @node-click="handleNodeClick"></el-tree>
 				</el-col>
 				<el-col :span="20">
-					<div class="power-add-title">
+					<div class="content-right-title">
 						顶级权限
 						<el-button type='danger' @click='addInfo.isOpen = true'>新 增</el-button>
 					</div>
@@ -112,14 +112,3 @@
 	import power from './power.js';
 	export default power;
 </script>
-
-<style lang="scss">
-	.power-add-title {
-		font-size: 18px;
-		font-weight: bold;
-		padding-bottom: 32px;
-		.el-button {
-			float: right;
-		}
-	}
-</style>

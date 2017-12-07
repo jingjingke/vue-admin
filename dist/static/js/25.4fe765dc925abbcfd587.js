@@ -1,0 +1,1 @@
+webpackJsonp([25],{"+zCl":function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={name:"CollectionStrategy",data:function(){return{}},methods:{}},l=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("el-main",[n("Breadcrumb")],1)},a=[],u={render:l,staticRenderFns:a},c=u,o=n("/Xao"),s=o(r,c,!1,null,null,null);t.default=s.exports}});

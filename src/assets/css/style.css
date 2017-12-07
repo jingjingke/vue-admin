@@ -2,14 +2,18 @@
 	display: inline;
 	margin-left: 10px;
 }
+
 .disNone {
 	display: none;
 }
 
+
 /*针对弹层上面的下拉选框大小*/
+
 .el-dialog .el-select {
 	width: 100%;
 }
+
 .el-textarea__inner {
 	font-family: "微软雅黑";
 	font-size: 13px;
@@ -18,9 +22,22 @@
 .text-center {
 	text-align: center;
 }
+
 .text-red {
 	color: #c00;
 }
+
 .mt30 {
 	margin-top: 30px;
+}
+
+
+/*三栏样式右侧标题样式*/
+.content-right-title {
+	font-size: 18px;
+	font-weight: bold;
+	padding-bottom: 32px;
+}
+.content-right-title .el-button {
+	float: right;
 }
