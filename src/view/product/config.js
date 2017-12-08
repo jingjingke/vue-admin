@@ -54,26 +54,13 @@ export default {
 		},
 		//格式化数字转成字符串名
 		formatValue(row, column, cellValue) {
-			//根据传入的prop值确认规则列表
-			if(column.property === 'type') {
-				return this.fomatLoopValue(cellValue, [{
-					text: '0',
-					value: "人工分配"
-				}, {
-					text: '1',
-					value: "自动指派"
-				}]);
-			} else if(column.property === 'status') {
-				return this.fomatLoopValue(cellValue, [{
-					text: '0',
-					value: "启用"
-				}, {
-					text: '1',
-					value: "禁用"
-				}]);
-			} else if(column.property === 'roleName') {
-				return cellValue || '暂无';
-			}
+			return this.fomatLoopValue(cellValue, [{
+				text: '0',
+				value: "启用"
+			}, {
+				text: '1',
+				value: "禁用"
+			}]);
 		},
 		//新增ajax
 		sendAddAjax(formName) {
