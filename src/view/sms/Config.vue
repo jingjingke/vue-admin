@@ -83,7 +83,7 @@
 					<el-input type='text' v-model="addInfo.form.msgSign"></el-input>
 				</el-form-item>
 				<el-form-item label="短信模板" prop='templateContent'>
-					<el-input type='textarea' v-model="addInfo.form.templateContent"></el-input>
+					<el-input type='textarea' v-model="addInfo.form.templateContent" :rows='3'></el-input>
 				</el-form-item>
 			</el-form>
 			<div slot="footer" class="dialog-footer">
@@ -129,7 +129,7 @@
 					<el-input type='text' v-model="changeInfo.form.msgSign"></el-input>
 				</el-form-item>
 				<el-form-item label="短信模板" prop='templateContent'>
-					<el-input type='textarea' v-model="changeInfo.form.templateContent"></el-input>
+					<el-input type='textarea' v-model="changeInfo.form.templateContent" :rows='3'></el-input>
 				</el-form-item>
 			</el-form>
 			<div slot="footer" class="dialog-footer">

@@ -73,7 +73,7 @@
 					<el-input type='text' v-model="passInfo.form.msgSign"></el-input>
 				</el-form-item>
 				<el-form-item label="短信模板" prop='templateContent'>
-					<el-input type='textarea' v-model="passInfo.form.templateContent"></el-input>
+					<el-input type='textarea' v-model="passInfo.form.templateContent" :rows='3'></el-input>
 				</el-form-item>
 				<el-form-item label="任务名称" prop='taskName'>
 					<el-input type='text' v-model="passInfo.form.taskName"></el-input>

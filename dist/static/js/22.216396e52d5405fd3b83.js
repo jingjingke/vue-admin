@@ -1,1 +1,0 @@
-webpackJsonp([22],{m9fB:function(e,t,n){"use strict";Object.defineProperty(t,"__esModule",{value:!0});var r={name:"ProductMaterial",data:function(){return{}},methods:{}},a=function(){var e=this,t=e.$createElement,n=e._self._c||t;return n("el-main",[n("Breadcrumb")],1)},u=[],l={render:a,staticRenderFns:u},c=l,o=n("/Xao"),s=o(r,c,!1,null,null,null);t.default=s.exports}});
