@@ -163,6 +163,10 @@ export default new Router({
 		name: 'Login',
 		component: resolve => require(['@/view/Login'], resolve)
 	}, {
+		path: '/expired', //登录过期
+		name: 'Expired',
+		component: resolve => require(['@/view/Expired'], resolve)
+	}, {
 		path: '*', //404页面
 		name: 'NotFound',
 		component: resolve => require(['@/view/NotFound'], resolve)
