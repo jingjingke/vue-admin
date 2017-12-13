@@ -4,6 +4,8 @@
 // see http://vuejs-templates.github.io/webpack for documentation.
 
 const path = require('path')
+const BUILD = require('./build.path')
+
 
 module.exports = {
   dev: {
@@ -56,7 +58,7 @@ module.exports = {
     // Paths
     assetsRoot: path.resolve(__dirname, '../dist'),
     assetsSubDirectory: 'static',
-    assetsPublicPath: 'https://jingjingke.github.io/vue-admin/dist/',
+    assetsPublicPath: BUILD.URL,
 
     /**
      * SourceMap

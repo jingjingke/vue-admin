@@ -1,0 +1,1 @@
+webpackJsonp([29],{"6FGU":function(e,n,r){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var t={name:"BoardPromised",data:function(){return{}},methods:{}},a=function(){var e=this,n=e.$createElement,r=e._self._c||n;return r("el-main",[r("Breadcrumb")],1)},u=[],l={render:a,staticRenderFns:u},o=l,s=r("/Xao"),c=s(t,o,!1,null,null,null);n.default=c.exports}});

@@ -1,0 +1,1 @@
+webpackJsonp([32],{BTqA:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r={name:"BoardFocus",data:function(){return{}},methods:{}},a=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("el-main",[t("Breadcrumb")],1)},u=[],l={render:a,staticRenderFns:u},c=l,o=t("/Xao"),s=o(r,c,!1,null,null,null);n.default=s.exports}});

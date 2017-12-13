@@ -1,0 +1,1 @@
+webpackJsonp([30],{esq2:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r={name:"BoardNotReminder",data:function(){return{}},methods:{}},a=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("el-main",[t("Breadcrumb")],1)},u=[],l={render:a,staticRenderFns:u},o=l,s=t("/Xao"),c=s(r,o,!1,null,null,null);n.default=c.exports}});

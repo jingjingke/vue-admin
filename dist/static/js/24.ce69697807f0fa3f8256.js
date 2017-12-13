@@ -1,1 +1,0 @@
-webpackJsonp([24],{"4kSl":function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r={name:"OrderIntend",data:function(){return{}},methods:{}},a=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("el-main",[t("Breadcrumb")],1)},l=[],u={render:a,staticRenderFns:l},c=u,d=t("/Xao"),s=d(r,c,!1,null,null,null);n.default=s.exports}});
