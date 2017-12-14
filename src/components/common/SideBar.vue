@@ -2,7 +2,7 @@
 	<div :width="isCollapse===true?'64px':'200px'" class='side-menu'>
 		<div class="page-title" @click='toggleCollapse'>
 			<i class="el-icon-more" v-if='isCollapse'></i>
-			<template v-else>金爱农运营后台</template>
+			<template v-else>{{webInfo.name}}</template>
 		</div>
 		<el-menu unique-opened router :collapse='isCollapse' :default-active='activeValue'>
 			<template v-for='(menu,index) in menuJson'>

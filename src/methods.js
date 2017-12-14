@@ -1,8 +1,11 @@
 //引入调用图像预览的组件
 import ImgPreview from '@/components/imgPreview/index.js';
 import qrCode from '@/components/qrCode/index.js';
+import webInfo from './config.js';
 
 var methods = {
+	//后台基础信息
+	webInfo:webInfo,
 	//重置表达数据
 	resetForm:function(formName){
 		this.$refs[formName].resetFields()

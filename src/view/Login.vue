@@ -1,7 +1,7 @@
 <template>
 	<div class="login-page">
 		<div class="login-page-form">
-			<h1>金爱农运营后台</h1>
+			<h1>{{webInfo.name}}</h1>
 			<el-form ref="login" :model="form" class="login-form">
 				<el-form-item
 					label="用户名"
@@ -19,7 +19,7 @@
 				</el-form-item>
 				<el-button @click="submitForm('login')" type="primary">点击登录</el-button>
 			</el-form>
-			<p class="login-copy-right">© 2017 浙江金爱农网络科技有限公司</p>
+			<p class="login-copy-right">© {{year}} {{webInfo.copy}}</p>
 		</div>
 	</div>
 </template>
@@ -32,8 +32,13 @@
 				form: {
 					name: '',
 					pass: ''
-				}
+				},
+				year:''
 			}
+		},
+		created(){
+			//获取当前年份
+			this.year = new Date().getFullYear();
 		},
 		methods: {
 			submitForm(formName) {
