@@ -1,5 +1,3 @@
-import listData from '@/data/list/sms-enabled.json';
-
 export default {
 	name: 'SmsEnabled',
 	data() {
@@ -77,7 +75,31 @@ export default {
 		getListAjax() {
 			console.log("发送ajax查询数据或分页规则处理")
 			//模拟取得列表
-			this.searchInfo.list = listData;
+			this.searchInfo.list = [{
+				"taskId": 179,
+				"page_size": 10,
+				"senceExt": "1,2,3,4,5,6,7,8",
+				"status": 5,
+				"productCode": "WND",
+				"remark": "看看",
+				"sceneId": 1,
+				"taskDesc": "欠款1-8天的逾期短信",
+				"msgSign": "朗格集团草根事业部",
+				"sendType": 1,
+				"platCode": "1",
+				"companyName": "江苏金爱农网络科技有限公司",
+				"taskName": "欠款1-8天的逾期短信",
+				"taskCron": "0 0 23 * * ?",
+				"companyCode": "0003",
+				"id": 64,
+				"platName": "金爱农",
+				"templateContent": "尊敬地用户${username}，您好，借钱不还不太好吧。请于下月${date}前还给我，保底金额${amount} 如有超期利息另算。",
+				"taskUrl": "http://172.16.34.174:9990/com.cgtz.module.cgjr.task.OutOfRangeRepayTask",
+				"senceName": "逾期",
+				"productName": "微农贷",
+				"targetType": 1,
+				"templateName": ""
+			}];
 		},
 		formatValue(row, column, cellValue) {
 			//根据传入的prop值确认规则列表

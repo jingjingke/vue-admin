@@ -1,11 +1,26 @@
-import powerTree from '@/data/all/powerTree.json';
-import listData from '@/data/list/group-power.json';
-
 export default {
 	name: 'GroupPower',
 	data() {
 		return {
-			powerTree: powerTree,
+			powerTree: [{
+				"children": [{
+					"id": 19,
+					"name": "产品设置",
+					"parentId": "18",
+					"seq": 0,
+					"type": "1"
+				}, {
+					"id": 101,
+					"name": "资料配置",
+					"parentId": "18",
+					"seq": 1,
+					"type": "1"
+				}],
+				"id": 18,
+				"name": "产品管理",
+				"seq": 12,
+				"type": "0"
+			}],
 			searchInfo: { //存放查询表单及列表数据
 				list: []
 			},
@@ -56,7 +71,13 @@ export default {
 		getListAjax(id) {
 			console.log("发送ajax查询数据或分页规则处理")
 			//模拟取得列表
-			this.searchInfo.list = listData;
+			this.searchInfo.list = [{
+				"href": "/product/config",
+				"id": 18,
+				"name": "产品管理",
+				"seq": 12,
+				"type": "0"
+			}];
 		},
 		//格式化数字转成字符串名
 		formatValue(row, column, cellValue) {

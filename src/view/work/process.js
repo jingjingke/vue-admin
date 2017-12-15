@@ -1,5 +1,3 @@
-import listData from '@/data/list/work-process.json';
-
 export default {
 	name: 'WorkProcess',
 	data() {
@@ -60,7 +58,12 @@ export default {
 		getListAjax() {
 			console.log("发送ajax查询数据或分页规则处理")
 			//模拟取得列表
-			this.searchInfo.list = listData;
+			this.searchInfo.list = [{
+				"addDate": "2016-05-02",
+				"processName": "浙江申请减免",
+				"definedName": "orderApply:1:1",
+				"litpic": "http://www.jingjingke.com/uploads/allimg/171026/1-1G026135P50-L.gif"
+			}]
 		},
 		//新增ajax
 		sendAddAjax(formName) {

@@ -1,5 +1,3 @@
-import listData from '@/data/list/sms-config.json';
-
 export default {
 	name: 'SmsConfig',
 	data() {
@@ -82,7 +80,43 @@ export default {
 		getListAjax() {
 			console.log("发送ajax查询数据或分页规则处理")
 			//模拟取得列表
-			this.searchInfo.list = listData;
+			this.searchInfo.list = [{
+				"senceExt": "30",
+				"status": 3,
+				"productCode": "WND",
+				"remark": "逾期30天后发送短信任务",
+				"sceneId": 1,
+				"msgSign": "常山人公司",
+				"sendType": 1,
+				"platCode": "1",
+				"companyName": "常山分公司",
+				"companyCode": "000100010003",
+				"id": 68,
+				"platName": "金爱农",
+				"templateContent": "尊敬的${username}，你有一笔应还金额${amount}元的借 款在${date}到期，请你马上还款，逾 期超过30天，我们将通知你的紧急联系人和相关亲友。",
+				"senceName": "逾期",
+				"productName": "微农贷",
+				"targetType": 1,
+				"verifyFailReason": "短信模板内容渠道不通过",
+				"templateName": ""
+			}, {
+				"senceExt": "3",
+				"status": 1,
+				"productCode": "WND",
+				"remark": "3天还款",
+				"sceneId": 1,
+				"msgSign": "农贷",
+				"sendType": 1,
+				"platCode": "1",
+				"companyName": "山东金爱农",
+				"companyCode": "0002",
+				"id": 69,
+				"platName": "金爱农",
+				"templateContent": "尊敬的${username},请尽快安排还款",
+				"senceName": "逾期",
+				"targetType": 1,
+				"productName": "微农贷"
+			}];
 		},
 		//格式化数字转成字符串名
 		formatValue(row, column, cellValue) {

@@ -1,5 +1,3 @@
-import listData from '@/data/list/group-department.json';
-
 export default {
 	name: 'GroupDepartment',
 	data() {
@@ -44,7 +42,42 @@ export default {
 		getListAjax() {
 			console.log("发送ajax查询数据或分页规则处理")
 			//模拟取得列表
-			this.searchInfo.list = listData;
+			this.searchInfo.list = [{
+				"description": "内务1",
+				"id": 43,
+				"name": "内务部",
+				"status": "0"
+			}, {
+				"description": "风控",
+				"id": 42,
+				"name": "风控部",
+				"status": "0"
+			}, {
+				"description": "超级",
+				"id": 41,
+				"name": "超级管理员",
+				"status": "0"
+			}, {
+				"description": "核算支持",
+				"id": 36,
+				"name": "财务部",
+				"status": "0"
+			}, {
+				"description": "管理",
+				"id": 35,
+				"name": "总经理",
+				"status": "0"
+			}, {
+				"description": "外访支持",
+				"id": 34,
+				"name": "外访部",
+				"status": "0"
+			}, {
+				"description": "业务支持",
+				"id": 33,
+				"name": "业务部",
+				"status": "0"
+			}];
 		},
 		//新增ajax
 		sendAddAjax(formName) {
@@ -73,7 +106,7 @@ export default {
 				this.$refs['formByChange'].resetFields()
 				//提取列表中的值
 				this.changeInfo.form = {
-					id:obj.id,
+					id: obj.id,
 					name: obj.name,
 					description: obj.description
 				}
@@ -107,7 +140,7 @@ export default {
 		},
 		//启用禁用ajax
 		sendDeleteAjax() {
-			console.log('确认删除ID为'+this.deleteInfo.form.id+'的部门')
+			console.log('确认删除ID为' + this.deleteInfo.form.id + '的部门')
 		}
 	},
 	mounted() {

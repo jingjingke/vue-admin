@@ -25,10 +25,10 @@
 				</el-table-column>
 			</el-table>
 		</ContentWarp>
-		<ContentWarp class='center'>
+		<!--<ContentWarp class='center'>
 			<el-pagination :page-size="10" layout="total, prev, pager, next, jumper" :total="126">
 			</el-pagination>
-		</ContentWarp>
+		</ContentWarp>-->
 		
 		<!--新增窗口-->
 		<el-dialog title="新增部门" width='600px' center :visible.sync='addInfo.isOpen' :show-close='false'>

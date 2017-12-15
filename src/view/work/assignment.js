@@ -1,5 +1,3 @@
-import listData from '@/data/list/work-assignment.json';
-
 export default {
 	name: 'WorkAssignment',
 	data() {
@@ -52,7 +50,17 @@ export default {
 		getListAjax() {
 			console.log("发送ajax查询数据或分页规则处理")
 			//模拟取得列表
-			this.searchInfo.list = listData;
+			this.searchInfo.list = [{
+				"productName": "微农贷",
+				"productCode": "WND",
+				"companyName": "杭州金爱农总公司",
+				"companyCode": "0001",
+				"status": 0,
+				"isAutoCreated": 1,
+				"processId": "1",
+				"processName": "浙江申请减免",
+				"definedName": "orderApply:1:1"
+			}];
 		},
 		//格式化数字转成字符串名
 		formatValue(row, column, cellValue) {
@@ -102,7 +110,7 @@ export default {
 				this.$refs['formByChange'].resetFields()
 				//提取列表中的值
 				this.changeInfo.form = {
-					id:obj.id,
+					id: obj.id,
 					productCode: obj.productCode,
 					companyCode: obj.companyCode,
 					processId: obj.processId

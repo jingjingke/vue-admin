@@ -1,4 +1,3 @@
-import listData from '@/data/list/group-staff.json';
 import departmentList from '@/data/all/companyDepartment.json';
 import roleList from '@/data/all/companyRole.json';
 
@@ -9,11 +8,11 @@ export default {
 			companyData: {
 				id: 1,
 				name: '总公司',
-				code:'001',
-				twoDimensionCodeImageUrl:"http://cgtzimage.b0.upaiyun.com/matrix/image/000000000000000B.png"
+				code: '001',
+				twoDimensionCodeImageUrl: "http://cgtzimage.b0.upaiyun.com/matrix/image/000000000000000B.png"
 			},
-			departmentList:[],
-			roleList:[],
+			departmentList: [],
+			roleList: [],
 			searchInfo: { //存放查询表单及列表数据
 				list: [],
 				form: {
@@ -24,15 +23,15 @@ export default {
 			addInfo: { //存放新增窗口显示状态及它的表单数据
 				isOpen: false,
 				form: {
-					loginAccount:'',
-					password:'',
-					name:'',
-					phoneNo:'',
-					email:'',
-					departmentId:'',
-					companyCode:'001',	//从companyData中获取
-					companyId:1,		//同上
-					roleIdList:''
+					loginAccount: '',
+					password: '',
+					name: '',
+					phoneNo: '',
+					email: '',
+					departmentId: '',
+					companyCode: '001', //从companyData中获取
+					companyId: 1, //同上
+					roleIdList: ''
 				}
 			},
 			changeInfo: {
@@ -43,13 +42,13 @@ export default {
 				isOpen: false,
 				form: {}
 			},
-			passInfo:{
+			passInfo: {
 				isOpen: false,
 				form: {
-					password:'',
-					password2:'',
+					password: '',
+					password2: '',
 				},
-				data:{}
+				data: {}
 			},
 			rules: {
 				loginAccount: [{
@@ -97,7 +96,28 @@ export default {
 		getListAjax() {
 			console.log("发送ajax查询数据或分页规则处理")
 			//模拟取得列表
-			this.searchInfo.list = listData;
+			this.searchInfo.list = [{
+				"companyCityCode": "",
+				"companyCode": "0",
+				"companyId": "1",
+				"createTime": 1511917213000,
+				"departmentId": "41",
+				"departmentName": "超级管理员",
+				"email": "",
+				"id": 150,
+				"loginAccount": "admin",
+				"name": "admin",
+				"phoneNo": "15012345678",
+				"twoDimensionCodeImageUrl": "http://cgtzimage.b0.upaiyun.com/matrix/image/000000000000000B.png",
+				"roleList": [{
+					"hideLevel": 100,
+					"id": 21,
+					"name": "超级管理员",
+					"status": "0",
+					"type": "0",
+				}],
+				"status": "0"
+			}];
 		},
 		//格式化数字转成字符串名
 		formatValue(row, column, cellValue) {
@@ -110,11 +130,11 @@ export default {
 					text: '0',
 					value: "启用"
 				}]);
-			}else if(column.property === 'email') {
+			} else if(column.property === 'email') {
 				return cellValue || "未填写";
-			}else if(column.property === 'roleList') {
+			} else if(column.property === 'roleList') {
 				let arr = [];
-				for(let i=0; i < cellValue.length;i++){
+				for(let i = 0; i < cellValue.length; i++) {
 					arr.push(cellValue[i].name)
 				}
 				return arr.join('、');
@@ -149,23 +169,23 @@ export default {
 				this.$refs['formByChange'].resetFields()
 				//重整roleIdList
 				let roleIdList = [];
-				if(obj.roleList !== ''){
-					obj.roleList.forEach(item=>{
+				if(obj.roleList !== '') {
+					obj.roleList.forEach(item => {
 						roleIdList.push(parseInt(item.id))
 					})
 				}
 				//提取列表中的值
 				this.changeInfo.form = {
-					id:obj.id,
-					loginAccount:obj.loginAccount,
-					name:obj.name,
-					phoneNo:obj.phoneNo,
-					email:obj.email,
-					departmentId:parseInt(obj.departmentId),
-					companyCode:obj.companyCode,
-					companyId:parseInt(obj.companyId),
-					companyId:1,
-					roleIdList:roleIdList
+					id: obj.id,
+					loginAccount: obj.loginAccount,
+					name: obj.name,
+					phoneNo: obj.phoneNo,
+					email: obj.email,
+					departmentId: parseInt(obj.departmentId),
+					companyCode: obj.companyCode,
+					companyId: parseInt(obj.companyId),
+					companyId: 1,
+					roleIdList: roleIdList
 				}
 			}, 100)
 		},
@@ -230,14 +250,14 @@ export default {
 		//查询默认列表
 		this.getListAjax();
 		//过滤绑定部门
-		departmentList.forEach(item=>{
-			if(item.bangStatus==='1'){
+		departmentList.forEach(item => {
+			if(item.bangStatus === '1') {
 				this.departmentList.push(item)
 			}
 		})
 		//过滤绑定角色
-		roleList.forEach(item=>{
-			if(item.bangStatus==='1'){
+		roleList.forEach(item => {
+			if(item.bangStatus === '1') {
 				this.roleList.push(item)
 			}
 		})

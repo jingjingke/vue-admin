@@ -1,5 +1,3 @@
-import listData from '@/data/list/sms-review.json';
-
 export default {
 	name: 'SmsReview',
 	data() {
@@ -71,7 +69,25 @@ export default {
 		getListAjax() {
 			console.log("发送ajax查询数据或分页规则处理")
 			//模拟取得列表
-			this.searchInfo.list = listData;
+			this.searchInfo.list = [{
+				"senceExt": "4",
+				"status": 1,
+				"productCode": "WND",
+				"remark": "11",
+				"sceneId": 1,
+				"msgSign": "【农游】",
+				"sendType": 1,
+				"platCode": "1",
+				"companyName": "浙江金爱农龙游分公司",
+				"companyCode": "000100010002",
+				"id": 70,
+				"platName": "金爱农",
+				"templateContent": "尊敬的${username}，你有一笔应还金额￥${amount}元的借 款在${date}到期，请你马上还款，逾 期超过30天，我们将通知你的紧急联系人和相关亲友。",
+				"senceName": "逾期",
+				"productName": "微农贷",
+				"targetType": 1,
+				"templateName": ""
+			}];
 		},
 		//格式化数字转成字符串名
 		formatValue(row, column, cellValue) {

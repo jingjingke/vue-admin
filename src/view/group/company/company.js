@@ -1,4 +1,3 @@
-import listData from '@/data/list/group-company.json';
 import bangDepartment from '@/data/all/companyDepartment.json';
 import bangRole from '@/data/all/companyRole.json';
 
@@ -9,8 +8,8 @@ export default {
 			companyData: {
 				id: 1,
 				name: '总公司',
-				code:'001',
-				twoDimensionCodeImageUrl:"http://cgtzimage.b0.upaiyun.com/matrix/image/000000000000000B.png"
+				code: '001',
+				twoDimensionCodeImageUrl: "http://cgtzimage.b0.upaiyun.com/matrix/image/000000000000000B.png"
 			},
 			searchInfo: { //存放查询表单及列表数据
 				list: []
@@ -82,7 +81,23 @@ export default {
 		getListAjax() {
 			console.log("发送ajax查询数据或分页规则处理")
 			//模拟取得列表
-			this.searchInfo.list = listData;
+			this.searchInfo.list = [{
+				"area": "330000",
+				"areaName": "浙江省",
+				"code": "0001",
+				"guaranteed": "55",
+				"hasChild": "1",
+				"id": 24,
+				"isEnd": "0",
+				"name": "浙江金爱农网络科技有限公司",
+				"parentId": "1",
+				"parentName": "总公司",
+				"principalArea": "330000",
+				"principalAreaName": "浙江省",
+				"status": "0",
+				"type": "0",
+				"twoDimensionCodeImageUrl": "http://cgtzimage.b0.upaiyun.com/matrix/image/000000000000000B.png"
+			}];
 		},
 		//格式化数字转成字符串名
 		formatValue(row, column, cellValue) {
@@ -175,9 +190,9 @@ export default {
 				list: bangDepartment
 			}
 			//初始默认选中的情况
-			setTimeout(()=>{
-				this.checkBangDefault('bangDepartment',bangDepartment)
-			},100)
+			setTimeout(() => {
+				this.checkBangDefault('bangDepartment', bangDepartment)
+			}, 100)
 		},
 		//公司绑定部门发送ajax
 		sendDepartmentAjax() {
@@ -197,9 +212,9 @@ export default {
 				list: bangRole
 			}
 			//初始默认选中的情况
-			setTimeout(()=>{
-				this.checkBangDefault('bangRole',bangRole)
-			},100)
+			setTimeout(() => {
+				this.checkBangDefault('bangRole', bangRole)
+			}, 100)
 		},
 		//关闭绑定部门或角色窗口
 		closeBang(name) {
@@ -230,15 +245,15 @@ export default {
 			}
 		},
 		//过滤并初始化刚打开绑定窗口时选择状态
-		checkBangDefault(formname,arr){
+		checkBangDefault(formname, arr) {
 			let newArr = []
-			for(let i = 0 ; i<arr.length; i++){
-				if(arr[i].bangStatus === '1'){
+			for(let i = 0; i < arr.length; i++) {
+				if(arr[i].bangStatus === '1') {
 					newArr.push(arr[i])
 				}
 			}
-			if(newArr.length > 0){
-				newArr.forEach(row=>{
+			if(newArr.length > 0) {
+				newArr.forEach(row => {
 					this.$refs[formname].toggleRowSelection(row);
 				})
 			}

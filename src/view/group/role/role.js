@@ -1,5 +1,3 @@
-import listData from '@/data/list/group-role.json';
-
 export default {
 	name: 'GroupRole',
 	data() {
@@ -23,7 +21,7 @@ export default {
 				isOpen: false,
 				form: {}
 			},
-			typeList:['后台','省级','市级','县级'],
+			typeList: ['后台', '省级', '市级', '县级'],
 			rules: {
 				name: [{
 					required: true,
@@ -50,7 +48,73 @@ export default {
 		getListAjax() {
 			console.log("发送ajax查询数据或分页规则处理")
 			//模拟取得列表
-			this.searchInfo.list = listData;
+			this.searchInfo.list = [{
+				"hideLevel": 0,
+				"id": 25,
+				"name": "副总经理",
+				"status": "0",
+				"type": "1"
+			}, {
+				"hideLevel": 0,
+				"id": 24,
+				"name": "市级指派员",
+				"status": "0",
+				"type": "0"
+			}, {
+				"hideLevel": 0,
+				"id": 22,
+				"name": "市级管理员",
+				"status": "0",
+				"type": "0"
+			}, {
+				"hideLevel": 100,
+				"id": 21,
+				"name": "超级管理员",
+				"status": "0",
+				"type": "0"
+			}, {
+				"hideLevel": 0,
+				"id": 20,
+				"name": "省级风控",
+				"roleNo": "0010",
+				"status": "0",
+				"type": "1"
+			}, {
+				"hideLevel": 90,
+				"id": 10,
+				"name": "市级财务",
+				"roleNo": "0009",
+				"status": "0",
+				"type": "2"
+			}, {
+				"hideLevel": 80,
+				"id": 9,
+				"name": "县级内务",
+				"roleNo": "0008",
+				"status": "0",
+				"type": "3"
+			}, {
+				"hideLevel": 99,
+				"id": 8,
+				"name": "总经理",
+				"roleNo": "0007",
+				"status": "0",
+				"type": "1"
+			}, {
+				"hideLevel": 98,
+				"id": 7,
+				"name": "市级负责人",
+				"roleNo": "0006",
+				"status": "0",
+				"type": "2"
+			}, {
+				"hideLevel": 90,
+				"id": 6,
+				"name": "市级风控",
+				"roleNo": "0005",
+				"status": "0",
+				"type": "2"
+			}];
 		},
 		//格式化数字转成字符串名
 		formatValue(row, column, cellValue) {
@@ -83,7 +147,7 @@ export default {
 				this.$refs['formByChange'].resetFields()
 				//提取列表中的值
 				this.changeInfo.form = {
-					id:obj.id,
+					id: obj.id,
 					name: obj.name,
 					type: parseInt(obj.type),
 					hideLevel: obj.hideLevel

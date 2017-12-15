@@ -18,17 +18,40 @@
 </template>
 
 <script>
-	import companyTree from '@/data/all/companyTree.json';
-
 	export default {
 		data() {
 			return {
-				companyTree: companyTree,
+				companyTree: [{
+					"area": "",
+					"code": "0",
+					"hasChild": "1",
+					"id": 1,
+					"isEnd": "0",
+					"name": "总公司",
+					"parentId": "",
+					"principalArea": "",
+					"principalUserId": "",
+					"status": "0",
+					"type": "-1",
+					"children": [{
+						"area": "330000",
+						"code": "0001",
+						"guaranteed": "55",
+						"hasChild": "1",
+						"id": 24,
+						"isEnd": "0",
+						"name": "浙江金爱农网络科技有限公司",
+						"parentId": "1",
+						"principalArea": "330000",
+						"status": "0",
+						"type": "0"
+					}]
+				}]
 			}
 		},
 		methods: {
 			handleNodeClick(data) {
-				console.log('点击了公司：'+data.name+'ID为：'+data.id);
+				console.log('点击了公司：' + data.name + 'ID为：' + data.id);
 			}
 		}
 	}

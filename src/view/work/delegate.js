@@ -1,5 +1,3 @@
-import listData from '@/data/list/work-delegate.json';
-
 export default {
 	name: 'WorkDelegate',
 	data() {
@@ -63,7 +61,7 @@ export default {
 				roleId: [{
 					required: true,
 					message: '请选择指派角色',
-				},{
+				}, {
 					type: 'number',
 					message: '请选择指派角色',
 					trigger: 'change'
@@ -76,7 +74,28 @@ export default {
 		getListAjax() {
 			console.log("发送ajax查询数据或分页规则处理")
 			//模拟取得列表
-			this.searchInfo.list = listData;
+			this.searchInfo.list = [{
+				"assignedRole": {
+					"hideLevel": 0,
+					"id": 20,
+					"name": "省级风控",
+					"roleNo": "0010",
+					"status": "0",
+					"type": "1"
+				},
+				"assignedRoleId": "20",
+				"companyId": "24",
+				"companyName": "浙江金爱农网络科技有限公司",
+				"companyCode": "0001",
+				"id": 1,
+				"processId": "1",
+				"processName": "浙江申请减免",
+				"productCode": "WND",
+				"productName": "微农贷",
+				"roleId": "",
+				"status": "0",
+				"type": "1",
+			}];
 		},
 		//格式化数字转成字符串名
 		formatValue(row, column, cellValue) {

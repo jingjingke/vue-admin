@@ -1,5 +1,3 @@
-import listData from '@/data/list/product-config.json';
-
 export default {
 	name: 'ProductConfig',
 	data() {
@@ -50,7 +48,13 @@ export default {
 		getListAjax() {
 			console.log("发送ajax查询数据或分页规则处理")
 			//模拟取得列表
-			this.searchInfo.list = listData;
+			this.searchInfo.list = [{
+				"code": "WND",
+				"id": 82,
+				"modelId": "6",
+				"name": "微农贷1.0",
+				"status": "0"
+			}];
 		},
 		//格式化数字转成字符串名
 		formatValue(row, column, cellValue) {
