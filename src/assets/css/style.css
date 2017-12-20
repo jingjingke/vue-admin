@@ -41,3 +41,10 @@
 .content-right-title .el-button {
 	float: right;
 }
+
+/* 页面表单外套 */
+.content-form-warp {
+	width: 800px;
+	margin: 0 auto;
+	padding: 50px 100px 50px 50px;
+}

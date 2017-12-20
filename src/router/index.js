@@ -114,7 +114,11 @@ export default new Router({
 		}, {
 			path: 'collection/strategy', //催收管理-策略
 			name: 'CollectionStrategy',
-			component: resolve => require(['@/view/collection/Strategy.vue'], resolve)
+			component: resolve => require(['@/view/collection/strategy/List.vue'], resolve)
+		}, {
+			path: 'collection/strategy/edit', //催收管理-策略
+			name: 'CollectionStrategyEdit',
+			component: resolve => require(['@/view/collection/strategy/Edit.vue'], resolve)
 		}, {
 			path: 'collection/process', //催收管理-催收流程
 			name: 'CollectionProcess',

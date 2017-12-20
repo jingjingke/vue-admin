@@ -42,6 +42,6 @@
 </template>
 
 <script>
-	import strategy from './strategy';
-	export default strategy;
+	import list from './list';
+	export default list;
 </script>
