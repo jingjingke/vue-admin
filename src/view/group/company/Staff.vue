@@ -105,13 +105,15 @@
 						</template>
 					</el-select>
 				</el-form-item>
-				<el-form-item label="所属角色" prop='roleIdList'>
-					<el-select v-model='changeInfo.form.roleIdList' multiple>
-						<template v-for="option of roleList">
-							<el-option :label='option.name' :value='option.id'></el-option>
-						</template>
-					</el-select>
-				</el-form-item>
+				<template v-if='changeInfo.form.roleIdList !== undefined'>
+					<el-form-item label="所属角色" prop='roleIdList'>
+						<el-select v-model='changeInfo.form.roleIdList' multiple>
+							<template v-for="option of roleList">
+								<el-option :label='option.name' :value='option.id'></el-option>
+							</template>
+						</el-select>
+					</el-form-item>
+				</template>
 			</el-form>
 			<div slot="footer" class="dialog-footer">
 				<el-button type="primary" @click="sendChangeAjax('formByChange')">修 改</el-button>

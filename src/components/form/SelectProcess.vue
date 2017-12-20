@@ -7,7 +7,20 @@
 </template>
 
 <script>
-	import processList from '@/data/all/process.json';
+	const processList = [{
+		"processDefKey": "orderApply",
+		"processDefName": "orderApply:2:2",
+		"deployName": "浙江代扣2-2",
+		"deploymentId": "2",
+		"processDefinitionId": "orderApply:3:107"
+	}, {
+		"suspendsionState": false,
+		"processDefKey": "orderApply",
+		"processDefName": "orderApply:1:1",
+		"deployName": "20171031-浙江",
+		"deploymentId": "1",
+		"processDefinitionId": "orderApply:2:8"
+	}];
 
 	export default {
 		name: 'SelectProcess',
@@ -19,7 +32,9 @@
 		},
 		watch: {
 			'pid': "pidChange",
-			'value' (val) { this.pid = val }
+			'value' (val) {
+				this.pid = val
+			}
 		},
 		props: ['placeholder', 'value'],
 		methods: {

@@ -1,5 +1,93 @@
-import departmentList from '@/data/all/companyDepartment.json';
-import roleList from '@/data/all/companyRole.json';
+const departmentList = [{
+	"bangStatus": "1",
+	"id": 41,
+	"name": "超级管理员"
+}, {
+	"bangStatus": "1",
+	"id": 33,
+	"name": "业务部"
+}, {
+	"bangStatus": "1",
+	"id": 34,
+	"name": "外访部"
+}, {
+	"bangStatus": "0",
+	"id": 35,
+	"name": "总经理"
+}, {
+	"bangStatus": "1",
+	"id": 36,
+	"name": "财务部"
+}, {
+	"bangStatus": "1",
+	"id": 42,
+	"name": "风控部"
+}, {
+	"bangStatus": "0",
+	"id": 43,
+	"name": "内务部"
+}];
+const roleList = [{
+	"bangStatus": "1",
+	"id": 1,
+	"name": "管理员"
+}, {
+	"bangStatus": "1",
+	"id": 21,
+	"name": "超级管理员"
+}, {
+	"bangStatus": "0",
+	"id": 2,
+	"name": "县级业务员"
+}, {
+	"bangStatus": "0",
+	"id": 3,
+	"name": "县级风控"
+}, {
+	"bangStatus": "0",
+	"id": 4,
+	"name": "县级外访员"
+}, {
+	"bangStatus": "0",
+	"id": 5,
+	"name": "县级负责人"
+}, {
+	"bangStatus": "1",
+	"id": 6,
+	"name": "市级风控"
+}, {
+	"bangStatus": "1",
+	"id": 7,
+	"name": "市级负责人"
+}, {
+	"bangStatus": "1",
+	"id": 8,
+	"name": "总经理"
+}, {
+	"bangStatus": "0",
+	"id": 9,
+	"name": "县级内务"
+}, {
+	"bangStatus": "0",
+	"id": 10,
+	"name": "市级财务"
+}, {
+	"bangStatus": "1",
+	"id": 20,
+	"name": "省级风控"
+}, {
+	"bangStatus": "1",
+	"id": 22,
+	"name": "市级管理员"
+}, {
+	"bangStatus": "1",
+	"id": 24,
+	"name": "市级指派员"
+}, {
+	"bangStatus": "1",
+	"id": 25,
+	"name": "副总经理"
+}];
 
 export default {
 	name: 'GroupStaff',
@@ -246,7 +334,7 @@ export default {
 			this.passInfo.isOpen = false
 		}
 	},
-	mounted() {
+	created() {
 		//查询默认列表
 		this.getListAjax();
 		//过滤绑定部门

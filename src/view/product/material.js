@@ -191,8 +191,8 @@ export default {
 		}
 	},
 	mounted() {
-		this.list.title = materialTree[0].name;
-		this.list.data = materialTree[0].children;
+		this.list.title = this.materialTree[0].name;
+		this.list.data = this.materialTree[0].children;
 		this.list.isFinish = false;
 	}
 }

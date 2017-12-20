@@ -7,7 +7,19 @@
 </template>
 
 <script>
-	import productList from '@/data/all/product.json';
+	const productList = [{
+		"code": "WND",
+		"id": 1,
+		"modelId": "2",
+		"name": "微农贷",
+		"createUserId": "3"
+	}, {
+		"code": "SJD",
+		"id": 4,
+		"modelId": "8",
+		"name": "宋江贷",
+		"createUserId": "3"
+	}];
 
 	export default {
 		name: 'SelectProduct',
@@ -19,7 +31,9 @@
 		},
 		watch: {
 			'code': "codeChange",
-			'value' (val) { this.code = val }
+			'value' (val) {
+				this.code = val
+			}
 		},
 		props: ['placeholder', 'value'],
 		methods: {

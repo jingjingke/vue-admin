@@ -195,6 +195,16 @@ export default {
 				return false;
 			}
 		},
+		//点击保存
+		goSave(){
+			console.log('在此提交保存')
+			//在保存完成后返回
+			this.goBack()
+		},
+		//返回上一页
+		goBack(){
+			this.$router.back()
+		}
 	},
 	watch: {
 		'checklevel01Str': function() {

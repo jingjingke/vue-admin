@@ -33,7 +33,20 @@
 </template>
 
 <script>
-	import data from '@/data/all/city.json';
+	const data = {
+		"86": [{
+			"code": "110000",
+			"address": "北京市"
+		}],
+		"110000": {
+			"110100": "北京市"
+		},
+		"110100": {
+			"110101": "东城区",
+			"110102": "西城区",
+			"110105": "朝阳区"
+		}
+	};
 
 	export default {
 		name: 'SelectAddress',
@@ -52,7 +65,7 @@
 		watch: {
 			'prov': 'provChange',
 			'city': 'cityChange',
-			'value':'checkValue'
+			'value': 'checkValue'
 		},
 		props: ['value', 'name', 'multiple', 'btnText'],
 		methods: {
@@ -113,36 +126,46 @@
 			//添加到结果区
 			reseultAdd() {
 				if(this.area !== '') {
-					this.checkRedundant(this.area,this.getValue(this.area, this.areaList))
+					this.checkRedundant(this.area, this.getValue(this.area, this.areaList))
 				} else if(this.city !== '') {
-					this.checkRedundant(this.city,this.getValue(this.city, this.cityList))
+					this.checkRedundant(this.city, this.getValue(this.city, this.cityList))
 				} else if(this.prov !== '') {
-					this.checkRedundant(this.prov,this.getValue(this.prov, this.provList))
+					this.checkRedundant(this.prov, this.getValue(this.prov, this.provList))
 				}
 			},
 			//检查是否有重复或上级或下级重复[检查code]
-			checkRedundant(str,name){
+			checkRedundant(str, name) {
 				let strArr = str.match(/[0-9]{2}/g);
-				for(let i =0; i<this.codeList.length; i++){
+				for(let i = 0; i < this.codeList.length; i++) {
 					let codeArr = this.codeList[i].match(/[0-9]{2}/g);
-					if(str === this.codeList[i]){
-						this.$alert('“ '+name + ' ”已经添加过了！','提示',{ callback:action =>{}})
+					if(str === this.codeList[i]) {
+						this.$alert('“ ' + name + ' ”已经添加过了！', '提示', {
+							callback: action => {}
+						})
 						return false;
-					}else if(strArr[0] === codeArr[0]){
-						if(strArr[1] === codeArr[1]){
-							if(strArr[2] === '00'){
-								this.$alert('它的下级“ ' + this.nameList[i] + ' ”已经添加过了！','提示',{ callback:action =>{}})
+					} else if(strArr[0] === codeArr[0]) {
+						if(strArr[1] === codeArr[1]) {
+							if(strArr[2] === '00') {
+								this.$alert('它的下级“ ' + this.nameList[i] + ' ”已经添加过了！', '提示', {
+									callback: action => {}
+								})
 								return;
-							}else if(codeArr[2] === '00'){
-								this.$alert('它的上级“ ' + this.nameList[i] + ' ”已经添加过了！','提示',{ callback:action =>{}})
+							} else if(codeArr[2] === '00') {
+								this.$alert('它的上级“ ' + this.nameList[i] + ' ”已经添加过了！', '提示', {
+									callback: action => {}
+								})
 								return;
 							}
-						}else{
-							if(strArr[1] === '00'){
-								this.$alert('它的下级“ ' + this.nameList[i] + ' ”已经添加过了！','提示',{ callback:action =>{}})
+						} else {
+							if(strArr[1] === '00') {
+								this.$alert('它的下级“ ' + this.nameList[i] + ' ”已经添加过了！', '提示', {
+									callback: action => {}
+								})
 								return;
-							}else if(codeArr[1] === '00'){
-								this.$alert('它的上级“ ' + this.nameList[i] + ' ”已经添加过了！','提示',{ callback:action =>{}})
+							} else if(codeArr[1] === '00') {
+								this.$alert('它的上级“ ' + this.nameList[i] + ' ”已经添加过了！', '提示', {
+									callback: action => {}
+								})
 								return;
 							}
 						}
@@ -172,7 +195,7 @@
 				this.$emit('input', String(this.codeList))
 			},
 			//监听并检查value值变化情况
-			checkValue(value){
+			checkValue(value) {
 				//初始化结果的值  -- 挂载时先判断传过来的值不为空时
 				if(typeof value === 'string' && value !== '' && value !== String(this.codeList)) {
 					//整理数据
@@ -181,11 +204,11 @@
 					let propsName = this.$options.propsData.name;
 					if(typeof propsName === 'string' && propsName !== '') {
 						//正则替换引号再去分组
-						propsName = propsName.replace(/['|"]/g,'')
+						propsName = propsName.replace(/['|"]/g, '')
 						nameArr = propsName.split(',')
 					}
 					//添加数据
-					for(let i=0; i<codeArr.length; i++){
+					for(let i = 0; i < codeArr.length; i++) {
 						this.codeList.push(codeArr[i]);
 						this.nameList.push(nameArr[i] || codeArr[i])
 					}

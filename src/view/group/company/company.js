@@ -1,6 +1,3 @@
-import bangDepartment from '@/data/all/companyDepartment.json';
-import bangRole from '@/data/all/companyRole.json';
-
 export default {
 	name: 'GroupCompany',
 	data() {
@@ -187,11 +184,39 @@ export default {
 			//实际需要根据id经过ajax取得绑定的部门
 			this.bangDepartment = {
 				isOpen: true,
-				list: bangDepartment
+				list: [{
+					"bangStatus": "1",
+					"id": 41,
+					"name": "超级管理员"
+				}, {
+					"bangStatus": "1",
+					"id": 33,
+					"name": "业务部"
+				}, {
+					"bangStatus": "1",
+					"id": 34,
+					"name": "外访部"
+				}, {
+					"bangStatus": "0",
+					"id": 35,
+					"name": "总经理"
+				}, {
+					"bangStatus": "1",
+					"id": 36,
+					"name": "财务部"
+				}, {
+					"bangStatus": "1",
+					"id": 42,
+					"name": "风控部"
+				}, {
+					"bangStatus": "0",
+					"id": 43,
+					"name": "内务部"
+				}]
 			}
 			//初始默认选中的情况
 			setTimeout(() => {
-				this.checkBangDefault('bangDepartment', bangDepartment)
+				this.checkBangDefault('bangDepartment', this.bangDepartment.list)
 			}, 100)
 		},
 		//公司绑定部门发送ajax
@@ -209,11 +234,71 @@ export default {
 			//实际需要根据id经过ajax取得绑定的角色
 			this.bangRole = {
 				isOpen: true,
-				list: bangRole
+				list: [{
+					"bangStatus": "1",
+					"id": 1,
+					"name": "管理员"
+				}, {
+					"bangStatus": "1",
+					"id": 21,
+					"name": "超级管理员"
+				}, {
+					"bangStatus": "0",
+					"id": 2,
+					"name": "县级业务员"
+				}, {
+					"bangStatus": "0",
+					"id": 3,
+					"name": "县级风控"
+				}, {
+					"bangStatus": "0",
+					"id": 4,
+					"name": "县级外访员"
+				}, {
+					"bangStatus": "0",
+					"id": 5,
+					"name": "县级负责人"
+				}, {
+					"bangStatus": "1",
+					"id": 6,
+					"name": "市级风控"
+				}, {
+					"bangStatus": "1",
+					"id": 7,
+					"name": "市级负责人"
+				}, {
+					"bangStatus": "1",
+					"id": 8,
+					"name": "总经理"
+				}, {
+					"bangStatus": "0",
+					"id": 9,
+					"name": "县级内务"
+				}, {
+					"bangStatus": "0",
+					"id": 10,
+					"name": "市级财务"
+				}, {
+					"bangStatus": "1",
+					"id": 20,
+					"name": "省级风控"
+				}, {
+					"bangStatus": "1",
+					"id": 22,
+					"name": "市级管理员"
+				}, {
+					"bangStatus": "1",
+					"id": 24,
+					"name": "市级指派员"
+				}, {
+					"bangStatus": "1",
+					"id": 25,
+					"name": "副总经理"
+				}]
 			}
 			//初始默认选中的情况
 			setTimeout(() => {
-				this.checkBangDefault('bangRole', bangRole)
+				this.checkBangDefault('bangRole', this.bangRole.list)
 			}, 100)
 		},
 		//关闭绑定部门或角色窗口

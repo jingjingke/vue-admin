@@ -41,8 +41,8 @@
 				</table>
 			</div>
 			<div class="text-center mt30">
-				<el-button type="primary">保 存</el-button>
-				<el-button>取 消</el-button>
+				<el-button type="primary" @click='goSave'>保 存</el-button>
+				<el-button @click='goBack'>取 消</el-button>
 			</div>
 		</ContentWarp>
 	</el-main>
