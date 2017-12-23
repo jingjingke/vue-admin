@@ -48,3 +48,11 @@
 	margin: 0 auto;
 	padding: 50px 100px 50px 50px;
 }
+.content-form-warp .el-select {
+	width: 100%;
+}
+
+/*表单组件下的表格样式控制*/
+.el-form-item__content .el-table {
+	line-height:initial;
+}

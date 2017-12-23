@@ -11,7 +11,7 @@
 				</el-form-item>
 				<el-form-item>
 					<el-button type="success" @click="getListAjax">查询</el-button>
-					<el-button type="danger">新增</el-button>
+					<el-button type="danger" @click='$router.push("/collection/strategy/edit")'>新增</el-button>
 				</el-form-item>
 			</el-form>
 		</SearchWarp>
@@ -23,7 +23,7 @@
 				<el-table-column align='center' label="策略角色" prop='debtPolicyStepBoList' :formatter='formatValue' min-width='400px' />
 				<el-table-column align='center' label="操作" width='170px' >
 					<template slot-scope="scope">
-						<el-button size="mini" type="primary" icon="el-icon-edit" plain >修改</el-button>
+						<el-button size="mini" type="primary" icon="el-icon-edit" plain @click='$router.push("/collection/strategy/edit/" + scope.row.id)'>修改</el-button>
 						<el-button size="mini" type="danger" plain @click='openDelete(scope.row)'>删除</el-button>
 					</template>
 				</el-table-column>

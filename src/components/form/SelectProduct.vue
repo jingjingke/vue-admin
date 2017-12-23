@@ -1,5 +1,5 @@
 <template>
-	<el-select v-model='code' :placeholder="placeholder || '请选择'" clearable>
+	<el-select v-model='code' :placeholder="placeholder || '请选择'" :disabled='disabled || false' clearable>
 		<template v-for="option of productList">
 			<el-option :label='option.name' :value='option.code'></el-option>
 		</template>
@@ -35,7 +35,7 @@
 				this.code = val
 			}
 		},
-		props: ['placeholder', 'value'],
+		props: ['placeholder', 'value', 'disabled'],
 		methods: {
 			codeChange() {
 				this.$emit('input', this.code)

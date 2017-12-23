@@ -1,5 +1,5 @@
 <template>
-	<el-select v-model='pid' :placeholder="placeholder || '请选择'" clearable>
+	<el-select v-model='pid' :placeholder="placeholder || '请选择'" :disabled='disabled || false' clearable>
 		<template v-for="option of processList">
 			<el-option :label='option.deployName' :value='option.deploymentId'></el-option>
 		</template>
@@ -36,7 +36,7 @@
 				this.pid = val
 			}
 		},
-		props: ['placeholder', 'value'],
+		props: ['placeholder', 'value', 'disabled'],
 		methods: {
 			pidChange() {
 				this.$emit('input', this.pid)
