@@ -6,9 +6,10 @@ import router from './router'
 
 //单独使用element组件
 import {
-  Checkbox,InputNumber,Tag,Cascader,Row,Col,Tree,Upload,Dialog,Pagination,Table,TableColumn,Breadcrumb,BreadcrumbItem,Menu,Submenu,MenuItem,MenuItemGroup,Dropdown,DropdownMenu,DropdownItem,MessageBox,Message,Radio,RadioGroup,Input,Option,Select,Button,Form,FormItem,Container,Header,Aside,Main,Footer
+  DatePicker,Checkbox,InputNumber,Tag,Cascader,Row,Col,Tree,Upload,Dialog,Pagination,Table,TableColumn,Breadcrumb,BreadcrumbItem,Menu,Submenu,MenuItem,MenuItemGroup,Dropdown,DropdownMenu,DropdownItem,MessageBox,Message,Radio,RadioGroup,Input,Option,Select,Button,Form,FormItem,Container,Header,Aside,Main,Footer
 } from 'element-ui'
 
+Vue.use(DatePicker)
 Vue.use(Checkbox)
 Vue.use(InputNumber)
 Vue.use(Tag)
