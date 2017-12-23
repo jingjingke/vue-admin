@@ -45,7 +45,7 @@
 		
 		<!-- 查看窗口 -->
 		<el-dialog title="查看用户信息" width='400px' center :visible.sync='findInfo.isOpen' :show-close='false'>
-			<el-form :model="findInfo.form" label-position='left' label-width="110px">
+			<el-form :model="findInfo.form" label-position='right' label-width="110px" class='find-info-warp'>
 				<el-form-item label="姓名：">{{findInfo.form.name}}</el-form-item>
 				<el-form-item label="手机号：">{{findInfo.form.phone}}</el-form-item>
 				<el-form-item label="身份证号：">{{findInfo.form.code}}</el-form-item>

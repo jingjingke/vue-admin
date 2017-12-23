@@ -56,3 +56,9 @@
 .el-form-item__content .el-table {
 	line-height:initial;
 }
+
+/*查看窗口*/
+.find-info-warp .el-form-item {
+	margin-bottom: 0;
+	border-bottom: 1px dotted #eaeaea;
+}
