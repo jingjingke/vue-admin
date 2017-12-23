@@ -1,1 +1,0 @@
-webpackJsonp([27],{sbIP:function(e,n,t){"use strict";Object.defineProperty(n,"__esModule",{value:!0});var r={name:"CollectionProcess",data:function(){return{}},methods:{}},l=function(){var e=this,n=e.$createElement,t=e._self._c||n;return t("el-main",[t("Breadcrumb")],1)},a=[],s={render:l,staticRenderFns:a},u=s,c=t("/Xao"),o=c(r,u,!1,null,null,null);n.default=o.exports}});

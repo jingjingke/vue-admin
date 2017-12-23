@@ -37,20 +37,22 @@ const data = [{
 		"name": "资料配置",
 		"route": "/product/material"
 	}]
-}, {
-	"name": "任务管理",
-	"icon": "el-icon-setting",
-	"children": [{
-		"name": "任务概况",
-		"route": "/task/info"
-	}, {
-		"name": "我的任务",
-		"route": "/task/my"
-	}, {
-		"name": "任务派发",
-		"route": "/task/dispatch"
-	}]
-}, {
+},
+//{
+//	"name": "任务管理",
+//	"icon": "el-icon-setting",
+//	"children": [{
+//		"name": "任务概况",
+//		"route": "/task/info"
+//	}, {
+//		"name": "我的任务",
+//		"route": "/task/my"
+//	}, {
+//		"name": "任务派发",
+//		"route": "/task/dispatch"
+//	}]
+//},
+{
 	"name": "订单管理",
 	"icon": "el-icon-star-on",
 	"children": [{
@@ -84,34 +86,38 @@ const data = [{
 	"name": "催收管理",
 	"icon": "el-icon-bell",
 	"children": [{
-		"name": "策略",
-		"route": "/collection/strategy"
-	}, {
-		"name": "催收流程",
-		"route": "/collection/process"
-	}, {
-		"name": "角色催收地区",
-		"route": "/collection/area"
-	}]
-}, {
-	"name": "案件管理",
-	"icon": "el-icon-document",
-	"children": [{
-		"name": "案件列表",
-		"route": "/board/all"
-	}, {
-		"name": "所有未催",
-		"route": "/board/not-reminder"
-	}, {
-		"name": "所有已催",
-		"route": "/board/has-reminded"
-	}, {
-		"name": "答应会还",
-		"route": "/board/promised"
-	}, {
-		"name": "重点关注",
-		"route": "/board/focus"
-	}]
-}];
+			"name": "策略",
+			"route": "/collection/strategy"
+		}
+		//	, {
+		//		"name": "催收流程",
+		//		"route": "/collection/process"
+		//	}, {
+		//		"name": "角色催收地区",
+		//		"route": "/collection/area"
+		//	}
+	]
+}
+//,{
+//	"name": "案件管理",
+//	"icon": "el-icon-document",
+//	"children": [{
+//		"name": "案件列表",
+//		"route": "/board/all"
+//	}, {
+//		"name": "所有未催",
+//		"route": "/board/not-reminder"
+//	}, {
+//		"name": "所有已催",
+//		"route": "/board/has-reminded"
+//	}, {
+//		"name": "答应会还",
+//		"route": "/board/promised"
+//	}, {
+//		"name": "重点关注",
+//		"route": "/board/focus"
+//	}]
+//}
+];
 
 export default data;

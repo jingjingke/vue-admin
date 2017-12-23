@@ -35,7 +35,7 @@ export default new Router({
 				path: '/', //无路径时默认跳到登录页
 				name: 'GroupCompany',
 				component: resolve => require(['@/view/group/company/Company.vue'], resolve)
-			},{
+			}, {
 				path: 'staff', //无路径时默认跳到登录页
 				name: 'GroupStaff',
 				component: resolve => require(['@/view/group/company/Staff.vue'], resolve)
@@ -44,7 +44,7 @@ export default new Router({
 			path: 'group/role', //组织架构-角色管理
 			name: 'GroupRole',
 			component: resolve => require(['@/view/group/role/Role.vue'], resolve)
-		},{
+		}, {
 			path: 'group/role/power/:id', //组织架构-角色管理
 			name: 'GroupRolePower',
 			component: resolve => require(['@/view/group/role/Power.vue'], resolve)
@@ -67,21 +67,6 @@ export default new Router({
 			path: 'product/material', //产品管理-资料配置
 			name: 'ProductMaterial',
 			component: resolve => require(['@/view/product/Material.vue'], resolve)
-		}, {
-			path: 'task', //任务管理
-			redirect: 'task/info'
-		}, {
-			path: 'task/info', //任务管理-任务概况
-			name: 'TaskInfo',
-			component: resolve => require(['@/view/task/Info.vue'], resolve)
-		}, {
-			path: 'task/my', //任务管理-我的任务
-			name: 'TaskMy',
-			component: resolve => require(['@/view/task/My.vue'], resolve)
-		}, {
-			path: 'task/dispatch', //任务管理-任务派发
-			name: 'TaskDispatch',
-			component: resolve => require(['@/view/task/Dispatch.vue'], resolve)
 		}, {
 			path: 'order', //订单管理
 			redirect: 'order/loan'
@@ -123,37 +108,6 @@ export default new Router({
 			path: 'collection/strategy/edit/:id', //催收管理-策略-修改
 			name: 'CollectionStrategyEditById',
 			component: resolve => require(['@/view/collection/strategy/Edit.vue'], resolve)
-		}, {
-			path: 'collection/process', //催收管理-催收流程
-			name: 'CollectionProcess',
-			component: resolve => require(['@/view/collection/Process.vue'], resolve)
-		}, {
-			path: 'collection/area', //催收管理-角色催收地区
-			name: 'CollectionArea',
-			component: resolve => require(['@/view/collection/Area.vue'], resolve)
-		}, {
-			path: 'board', //案件管理
-			redirect: 'board/all'
-		}, {
-			path: 'board/all', //案件管理-案件列表
-			name: 'BoardAll',
-			component: resolve => require(['@/view/board/All.vue'], resolve)
-		}, {
-			path: 'board/not-reminder', //案件管理-所有未催
-			name: 'BoardNotReminder',
-			component: resolve => require(['@/view/board/NotReminder.vue'], resolve)
-		}, {
-			path: 'board/has-reminded', //案件管理-所有已催
-			name: 'BoardHasReminded',
-			component: resolve => require(['@/view/board/HasReminded.vue'], resolve)
-		}, {
-			path: 'board/promised', //案件管理-答应会还
-			name: 'BoardPromised',
-			component: resolve => require(['@/view/board/Promised.vue'], resolve)
-		}, {
-			path: 'board/focus', //案件管理-重点关注
-			name: 'BoardFocus',
-			component: resolve => require(['@/view/board/Focus.vue'], resolve)
 		}, {
 			path: 'user', //用户管理
 			redirect: 'user/find'
