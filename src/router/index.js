@@ -14,123 +14,195 @@ export default new Router({
 			path: 'work', //工作流设置
 			redirect: 'work/process'
 		}, {
-			path: 'work/process', //工作流设置-流程管理
+			path: 'work/process',
 			name: 'WorkProcess',
+			meta: {
+				title: '工作流程管理'
+			},
 			component: resolve => require(['@/view/work/Process.vue'], resolve)
 		}, {
-			path: 'work/assignment', //工作流设置-产品流程分配
+			path: 'work/assignment',
 			name: 'WorkAssignment',
+			meta: {
+				title: '产品流程分配'
+			},
 			component: resolve => require(['@/view/work/Assignment.vue'], resolve)
 		}, {
-			path: 'work/delegate', //工作流设置-委派规则配置
+			path: 'work/delegate',
 			name: 'WorkDelegate',
+			meta: {
+				title: '委派规则配置'
+			},
 			component: resolve => require(['@/view/work/Delegate.vue'], resolve)
 		}, {
 			path: 'group', //组织架构
 			redirect: 'group/company'
 		}, {
-			path: 'group/company', //组织架构-公司管理
+			path: 'group/company',
 			component: resolve => require(['@/view/group/company/Warp.vue'], resolve),
 			children: [{
-				path: '/', //无路径时默认跳到登录页
+				path: '/',
 				name: 'GroupCompany',
+				meta: {
+					title: '公司管理'
+				},
 				component: resolve => require(['@/view/group/company/Company.vue'], resolve)
 			}, {
-				path: 'staff', //无路径时默认跳到登录页
+				path: 'staff',
 				name: 'GroupStaff',
+				meta: {
+					title: '员工管理'
+				},
 				component: resolve => require(['@/view/group/company/Staff.vue'], resolve)
 			}]
 		}, {
-			path: 'group/role', //组织架构-角色管理
+			path: 'group/role',
 			name: 'GroupRole',
+			meta: {
+				title: '角色管理'
+			},
 			component: resolve => require(['@/view/group/role/Role.vue'], resolve)
 		}, {
-			path: 'group/role/power/:id', //组织架构-角色管理
+			path: 'group/role/power/:id',
 			name: 'GroupRolePower',
+			meta: {
+				title: '角色管理'
+			},
 			component: resolve => require(['@/view/group/role/Power.vue'], resolve)
 		}, {
-			path: 'group/department', //组织架构-部门管理
+			path: 'group/department',
 			name: 'GroupDepartment',
+			meta: {
+				title: '部门管理'
+			},
 			component: resolve => require(['@/view/group/Department.vue'], resolve)
 		}, {
-			path: 'group/power', //组织架构-权限管理
+			path: 'group/power',
 			name: 'GroupPower',
+			meta: {
+				title: '权限管理'
+			},
 			component: resolve => require(['@/view/group/Power.vue'], resolve)
 		}, {
 			path: 'product', //产品管理
 			redirect: 'product/config'
 		}, {
-			path: 'product/config', //产品管理-产品设置
+			path: 'product/config',
 			name: 'ProductConfig',
+			meta: {
+				title: '产品设置'
+			},
 			component: resolve => require(['@/view/product/Config.vue'], resolve)
 		}, {
-			path: 'product/material', //产品管理-资料配置
+			path: 'product/material',
 			name: 'ProductMaterial',
+			meta: {
+				title: '资料配置'
+			},
 			component: resolve => require(['@/view/product/Material.vue'], resolve)
 		}, {
 			path: 'order', //订单管理
 			redirect: 'order/loan'
 		}, {
-			path: 'order/loan', //订单管理-借款订单查询
+			path: 'order/loan',
 			name: 'OrderLoan',
+			meta: {
+				title: '借款订单查询'
+			},
 			component: resolve => require(['@/view/order/Loan.vue'], resolve)
 		}, {
-			path: 'order/intend', //订单管理-意向订单查询
+			path: 'order/intend',
 			name: 'OrderIntend',
+			meta: {
+				title: '意向订单查询'
+			},
 			component: resolve => require(['@/view/order/Intend.vue'], resolve)
 		}, {
 			path: 'sms', //短信管理
 			redirect: 'sms/config'
 		}, {
-			path: 'sms/config', //短信管理-模板配置
+			path: 'sms/config',
 			name: 'SmsConfig',
+			meta: {
+				title: '短信模板配置'
+			},
 			component: resolve => require(['@/view/sms/Config.vue'], resolve)
 		}, {
-			path: 'sms/review', //短信管理-模板审核
+			path: 'sms/review',
 			name: 'SmsReview',
+			meta: {
+				title: '短信模板审核'
+			},
 			component: resolve => require(['@/view/sms/Review.vue'], resolve)
 		}, {
-			path: 'sms/enabled', //短信管理-模板启用
+			path: 'sms/enabled',
 			name: 'SmsEnabled',
+			meta: {
+				title: '短信模板启用'
+			},
 			component: resolve => require(['@/view/sms/Enabled.vue'], resolve)
 		}, {
 			path: 'collection', //催收管理
 			redirect: 'collection/strategy'
 		}, {
-			path: 'collection/strategy', //催收管理-策略
+			path: 'collection/strategy',
 			name: 'CollectionStrategy',
+			meta: {
+				title: '催收策略'
+			},
 			component: resolve => require(['@/view/collection/strategy/List.vue'], resolve)
 		}, {
-			path: 'collection/strategy/edit', //催收管理-策略-新增
+			path: 'collection/strategy/edit',
 			name: 'CollectionStrategyEdit',
+			meta: {
+				title: '新增策略'
+			},
 			component: resolve => require(['@/view/collection/strategy/Edit.vue'], resolve)
 		}, {
-			path: 'collection/strategy/edit/:id', //催收管理-策略-修改
+			path: 'collection/strategy/edit/:id',
 			name: 'CollectionStrategyEditById',
+			meta: {
+				title: '修改策略'
+			},
 			component: resolve => require(['@/view/collection/strategy/Edit.vue'], resolve)
 		}, {
 			path: 'user', //用户管理
 			redirect: 'user/find'
 		}, {
-			path: 'user/find', //用户管理-用户查询
+			path: 'user/find', 
 			name: 'UserFind',
+			meta: {
+				title: '用户查询'
+			},
 			component: resolve => require(['@/view/user/Find.vue'], resolve)
 		}, {
-			path: 'user/password', //用户管理-重置密码
+			path: 'user/password',
 			name: 'Password',
+			meta: {
+				title: '用户重置密码'
+			},
 			component: resolve => require(['@/view/user/Password.vue'], resolve)
 		}]
 	}, {
-		path: '/login', //登录页面
+		path: '/login',
 		name: 'Login',
+		meta: {
+			title: '登录'
+		},
 		component: resolve => require(['@/view/Login'], resolve)
 	}, {
-		path: '/expired', //登录过期
+		path: '/expired',
 		name: 'Expired',
+		meta: {
+			title: '登录过期'
+		},
 		component: resolve => require(['@/view/Expired'], resolve)
 	}, {
 		path: '*', //404页面
 		name: 'NotFound',
+		meta: {
+			title: '找不到页面'
+		},
 		component: resolve => require(['@/view/NotFound'], resolve)
 	}]
 })

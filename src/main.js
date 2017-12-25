@@ -4,6 +4,9 @@ import Vue from 'vue'
 import App from './App'
 import router from './router'
 
+//引入站点全局信息
+import config from './config'
+
 //单独使用element组件
 import {
   DatePicker,Checkbox,InputNumber,Tag,Cascader,Row,Col,Tree,Upload,Dialog,Pagination,Table,TableColumn,Breadcrumb,BreadcrumbItem,Menu,Submenu,MenuItem,MenuItemGroup,Dropdown,DropdownMenu,DropdownItem,MessageBox,Message,Radio,RadioGroup,Input,Option,Select,Button,Form,FormItem,Container,Header,Aside,Main,Footer
@@ -64,6 +67,13 @@ Object.keys(methods).forEach((key)=>{
 //引入全局方法结束
 
 Vue.config.productionTip = false
+
+//添加路由钩子修改每个页面标题
+router.beforeEach((to,form,next)=>{
+	//如果自定义了标题就取标题，否则拿全局的
+	window.document.title = to.meta.title !== undefined?(to.meta.title + '-' + config.name):config.name
+	next()
+})
 
 /* eslint-disable no-new */
 new Vue({
