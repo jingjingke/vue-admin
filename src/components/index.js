@@ -1,4 +1,4 @@
-//通过组件
+// 通过组件
 import Header from "./common/Header";
 import SideBar from "./common/SideBar";
 import Breadcrumb from "./common/Breadcrumb";
@@ -13,15 +13,15 @@ import SelectAddress from "./form/SelectAddress";
 import SelectDepartment from "./form/SelectDepartment";
 
 export default {
-	Header,
-	SideBar,
-	Breadcrumb,
-	SearchWarp,
-	ContentWarp,
-	SelectCompany,
-	SelectProduct,
-	SelectProcess,
-	SelectRole,
-	SelectAddress,
-	SelectDepartment
-}
+  Header,
+  SideBar,
+  Breadcrumb,
+  SearchWarp,
+  ContentWarp,
+  SelectCompany,
+  SelectProduct,
+  SelectProcess,
+  SelectRole,
+  SelectAddress,
+  SelectDepartment
+};

@@ -1,64 +1,62 @@
 .el-upload__tip {
-	display: inline;
-	margin-left: 10px;
+  display: inline;
+  margin-left: 10px;
 }
 
 .disNone {
-	display: none;
+  display: none;
 }
 
-
-/*针对弹层上面的下拉选框大小*/
+/* 针对弹层上面的下拉选框大小 */
 
 .el-dialog .el-select {
-	width: 100%;
+  width: 100%;
 }
 
 .el-textarea__inner {
-	font-family: "微软雅黑";
-	font-size: 13px;
+  font-family: "微软雅黑";
+  font-size: 13px;
 }
 
 .text-center {
-	text-align: center;
+  text-align: center;
 }
 
 .text-red {
-	color: #c00;
+  color: #c00;
 }
 
 .mt30 {
-	margin-top: 30px;
+  margin-top: 30px;
 }
 
-
-/*三栏样式右侧标题样式*/
+/* 三栏样式右侧标题样式 */
 .content-right-title {
-	font-size: 18px;
-	font-weight: bold;
-	padding-bottom: 32px;
+  font-size: 18px;
+  font-weight: bold;
+  padding-bottom: 32px;
 }
 .content-right-title .el-button {
-	float: right;
+  float: right;
 }
 
 /* 页面表单外套 */
 .content-form-warp {
-	width: 800px;
-	margin: 0 auto;
-	padding: 50px 100px 50px 50px;
+  width: 800px;
+  margin: 0 auto;
+  padding: 50px 100px 50px 50px;
 }
 .content-form-warp .el-select {
-	width: 100%;
+  width: 100%;
 }
 
-/*表单组件下的表格样式控制*/
+/* 表单组件下的表格样式控制 */
 .el-form-item__content .el-table {
-	line-height:initial;
+  line-height: initial;
 }
 
-/*查看窗口*/
+/* 查看窗口 */
 .find-info-warp .el-form-item {
-	margin-bottom: 0;
-	border-bottom: 1px dotted #eaeaea;
+  margin-bottom: 0;
+  border-bottom: 1px dotted #eaeaea;
 }
