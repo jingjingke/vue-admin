@@ -12,7 +12,7 @@
 
 ## 效果
 
-![效果图1](src/assets/preview/e1.jpg)
-![效果图2](src/assets/preview/e2.jpg)
-![效果图3](src/assets/preview/e3.jpg)
-![效果图4](src/assets/preview/e4.jpg)
+![效果图1](https://jingjingke.github.io/vue-admin/src/assets/preview/e1.jpg)
+![效果图2](https://jingjingke.github.io/vue-admin/src/assets/preview/e2.jpg)
+![效果图3](https://jingjingke.github.io/vue-admin/src/assets/preview/e3.jpg)
+![效果图4](https://jingjingke.github.io/vue-admin/src/assets/preview/e4.jpg)
